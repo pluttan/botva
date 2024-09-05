@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Отзыв о кафедре ИУ6</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ea0b9977-b61f-4944-b9fe-08e278490aff" class="page sans"><header><h1 class="page-title">Отзыв о кафедре ИУ6</h1><p class="page-description"></p></header><div class="page-body"><p id="22d9a794-f645-4793-9348-d15120b244c7" class="">Кафедра &quot;Компьютерные системы и сети&quot; (ИУ6)</p><p id="4ea0bb43-baee-4592-a949-b55e1f08dfc4" class="">Хотелось бы написать свой отзыв о кафедре «Компьютерные системы и сети» МГТУ им.Баумана. Кафедра осуществляет обучение бакалавров по двум направлениям: «Вычислительные машины, комплексы и компьютерные сети» и «Прикладная информатика». Специалитета на кафедре больше нет, только бакалавриат (4 года) и магистратура (2 года).</p><p id="f206b9d6-3165-4cc4-afa8-4c04531e9a43" class="">В сети можно встретить разные отзывы про нашу кафедру, но, к сожалению, студенты не поясняют с какого они направления. А это довольно важный аспект, поскольку порой отзывы носят отрицательный характер, содержащий фразы из серии «я хотел только прогать, а в меня тут железяками тычат, поэтому фууу». Если студент с направления «Прикладная информатика», то понять его можно, поскольку сотрудники приемной комиссии обещают будущим абитуриентам что специальность будет связана с изучением бигдаты, нейросетей и прочих новомодных технологий, а на деле получается, что учебные планы этих двух направлений совпадают на 95%. Почему так получилось – отдельная тема для разговора. Поэтому первый совет, который хотелось бы дать будущим абитуриентам – смотрите внимательно учебные планы специальностей, на которые вы хотите пойти учиться.</p><p id="0c477bb0-2f88-475a-bd37-75ad98f05402" class="">Прежде чем начать свой долгий рассказ хотелось бы сказать пару слов о тех людях, кто писал данный отзыв. Мы окончили бакалавриат и магистратуру ИУ6 (с красным дипломом), причем кафедру выбирали осознанно и хотели сюда поступить.</p><p id="ead99555-8e82-4327-8e8b-cd944a64942a" class="">Когда поступали сюда, некоторые сотрудники приемной комиссии или знакомые, учившиеся на других кафедрах, говорили про ИУ6 как о кафедре системных администраторов (видимо, потому что содержит в названии слово «сети»). Но на практике оказалось, что никаким сетям тут качественно не учат (а пообщавшись со старшекурсниками, стало ясно, что и не учили…))).</p><p id="ab0940f1-d6f8-481f-8f14-29a057c31d77" class="">Изначально кафедра позиционировала себя как специальность между железом и программированием, готовя системных программистов. Не разработчиков программного обеспечения (читай кафедра ИУ7), не разработчиков баз данных (читай ИУ5), а системных программистов. Именно поэтому учебный план содержит такие дисциплины как электротехника, электроника, схемотехника, микропроцессорные системы и т.д.</p><p id="f5c624e5-8bbf-4949-bd60-066f29957725" class="">Также хочется заострить внимание на комментариях из серии «а че эт мы начерт какой-то учим, диффуры эти, физику… я прогать пришел, а не вот это все…». Наличие этих специальностей вызвано прежде всего тем, что мы учимся в университете (высшее образование само по себе подразумевает изучение фундаментальных наук, поскольку они развивают мозги), а также это университет, который исторически выпускал ИНЖЕНЕРОВ (а не жалкую пародию на тазах в Измайлово). И стоит отметить, что руководство факультета максимально постаралось пойти на встречу студентам нашего факультета, исключив исконно инженерные дисциплины (сопромат, ТММ и тд). А если хочется научиться «чисто прогать», то гораздо проще пойти на курсы, коих развелось тьма.</p><p id="8c579960-597c-4f19-9b76-1a6cdeba1a67" class="">На этом моменте мне бы тоже хотелось заострить внимание, поскольку очень часто абитуриенты не понимают насколько разнообразен и широк мир IT-специальностей, в следствие чего могут сделать неправильный выбор, что оборачивается разочарованием. IT не равно ПРОГРАММИРОВАНИЕ. IT это совокупность различных дисциплин.</p><p id="b8a7c042-2941-41b4-945c-d1b84879a09b" class="">Первый курс.</p><p id="a9b7bce4-ae12-4c98-8aea-a8df09e8aeb9" class="">Основы программирования (Pascal) – 1 семестр и объектно-ориентированное программирование (C (кратенько), C++) – 2 семестр. Лекции читает И***** Г.С.</p><p id="c5722a19-c166-4c21-b35b-1c9315cf7977" class="">Курс включает в себя семинары и цикл лабораторных работ.</p><p id="7a852aff-0110-42b3-a4ba-54117c578600" class="">Что хочется отметить: ГС - это преподаватель, которые многие могут неправильно воспринять. Я помню, как на первой лекции многие мальчики (особенно те, что уже и С++ немного знали) подшучивали над лектором, поговаривая «ей бы пирожки внукам печь, а не про прогу рассказывать». Но по факту, Г.С. – это тот человек, про которого можно сказать, что полный порядок в голове =&gt; и в лекциях. Это настоящий Преподаватель, способный разжевать материал так, что даже самый долгодумающий человек все поймет (никогда не забуду ее примеры по ООП про машину и колеса, или дом и стены). Все ее лекции оформлены в презентации. Все презентации содержат исчерпывающее количество примеров. Также она написала 2 книги, в которых материал изложен очень доступным и понятым языком.</p><p id="7e10e4ac-2685-4a19-976e-107a89baf090" class="">Многие возмущаются, что основы программирования начинаются с изучения Паскаля. На мой взгляд, это правильное решение, потому что в потоке всегда найдутся ребята, которые не знакомы с программированием, а Паскаль – это удобный язык для вхождения в программирование. Программирование – это не синтаксис и библиотеки; это алгоритмическое мышление, которое Г.С. и пытается расшевелить. Если вы поняли основы, то перейти с одного на другой (тот же Python) не составит труда.</p><p id="dcb7b872-2fdd-498c-8443-20bb79d59b8a" class="">ООП вызывает некоторые вопросы, общаясь с ребятами из ИУ7, создается впечатление, что у них этот курс содержит больше полезной информации. Плюс у них имеется специальный курс по алгоритмам, который в нашем учебном плане не помешало бы иметь…</p><p id="23576802-b3f5-4496-9d91-60f07f1e6291" class="">Минусом курса являются лабораторные работы (ЛР). Точнее не сами лабораторные работы, а преподаватели, которые их принимают. Помню, что, защищая ЛР, мы ожидали услышать конструктивную критику и советы как писать более оптимизировано, но по факту вся защита сводилась к правильно оформленному отчету (с выводами) и демонстрацией, что твоя программа работает (тут стоит отметить, что на кафедре нет систем с автоматической проверкой кода, все по принципу «что вижу, то пою»).</p><p id="9446f11d-6232-4573-8528-2b5326acbb9e" class="">Информатика. Читает Г****** А.М.</p><p id="93e76835-d16a-47a6-b138-157f035fd404" class="">По сути курс можно было бы назвать «Введение в специальность». Очень душевный человек, который может тебя «по-троллить», если ты чего-то не знаешь. Дисциплина, которая вызывает негодование у многих ребят. Опять же потому что ожидают что тут будут ПРОГАТЬ, а лектор рассказывает основы основ: про архитектуру компьютера, про булеву алгебру, системы счисления, про дополнительные, обратные коды и т.п. вещи. Хихикают, хихикают, только почему-то к концу обучения не знают, как проверить разряд регистра :)</p><p id="bb15f6fb-c368-4e1d-bfa3-a97de44ff4ea" class="">АМ очень много времени уделяет внимание истории университета, кафедры, что также порой вызывает обезьяний смех. Но лично мне кажется это очень странным. Очевидно, что подавляющее большинство не будет ничего читать про университет (ограничившись тем, что «легендарная Бауманка»), тем более про кафедру… А зря… послушать про историю зарождения кафедры от человека, у которого все это разворачивалось на глазах, было интересно и познавательно. Также отдельное спасибо, что замотивировал пойти в бауманский музей. Мы с одногруппниками много чего полезного узнали и это было первое «командообразующее» мероприятие.</p><p id="2cd0ee06-4fc8-41aa-b4c9-8bd58cc57dce" class="">Второй курс.</p><p id="13964e0e-62f6-4a28-adce-d45cc6dbb9ee" class="">Базы данных. Читает Ф***** М.М.</p><p id="6348e097-5ef4-4772-ad75-2be9d3b4496e" class="">В шутку называли эту дисциплину БДСМ (базы данных с М.). Очень эксцентричный человек, умеющий публично выступать, вовремя пошутить (его фразы мы растаскивали на цитаты). Поскольку очень много лет проработал в банковской сфере (причем на руководящих должностях), то очень много внимания в лекциях уделял особенностям работы с заказчиками (приводя живые примеры) и командной работы (за что ему спасибо), также в начале курса он выкладывал много различной литературы для саморазвития (за что ему также спасибо, очень много чего полезного в ней было изучено). Основы БД (именно основы) он дает хорошо, многие, кто связал свою дальнейшую жизнь с БД, давал положительную обратную связь.</p><p id="94323ea0-31d8-40c5-afc0-ace1c5e4f657" class="">Единственный и жирный минус курса – лабы. Преподаватели по ЛР оставляют желать лучшего… нас не покидало ощущение, что человек, который вел ЛР, сам не понимает что к чему…</p><p id="3125dfad-722a-4b9e-b3a6-1066fabbde8b" class="">Языки интернет-программирования (Ruby/Ruby on Rails). Читает С***** Р. С.</p><p id="3fd8d821-c63a-45e3-b59c-107d5747e2ee" class="">Интересный курс, толковый преподаватель-практик. Объемный поток информации. Пожалуй, один из немногих курсов, собирающих 90% положительных отзывов, поскольку перекликается с современными тенденциями. И да, тут ПРОГАЮТ (ааааа).</p><p id="04bc2211-b92f-43c5-a659-6f0bd5f83902" class="">Единственным недостатком является быстрая скорость чтения материала. А материала там будет ооочень много и нормально уложить это все за один семестр довольно сложно. Получаются «гонки по вертикали». Но зато изучите Ruby (фреймворк Ruby on Rails), JavaScript</p><p id="287fea17-334c-42f5-8268-fa42ccac25a3" class="">Электротехника и электроника.</p><p id="310c1190-3f20-4f6c-bcff-c05f42038a1c" class="">В наш год курс читал аксакал кафедры – И**** С.Р.</p><p id="171f2580-e52c-47e7-839d-57baea15f7b6" class="">Но мне хотелось бы здесь остановиться. С.Р. – пример настоящего Педагога. Он научил не сколько своей дисциплине, скорее многим другим вещам полезным в жизни (четкое формулирование мыслей, умение отстаивать свое мнение). За что ему огромное спасибо!</p><p id="ecfc9940-812a-4200-b7bb-1408c33f2135" class="">В свои 80 лет у него невероятная память (он за три лекции запоминал больше половины потока, а к концу курса мог стоя спиной (по голосу) определить человека, разговарившего на паре). Также пример человека, у которого все мысли в порядке (чем большинство молодых преподавателей не могут похвастаться). В настоящее время курс читают другие люди (даже не с нашей кафедры) и отзывы не самые положительные…</p><p id="b6bd433d-a7ec-40fa-96b1-49738740fbc1" class="">Машинно-зависимые языки и основы компиляции. Читает И***** Г.C.</p><p id="a850f729-6110-4c4e-bb2b-691824ba7bdd" class="">Также курс, который заставляет гореть «пукан» у многих ребят. «Зафига нам ассемблер, мы что в каменном веке?». Но именно этот курс дает понимание того, что скрывается за каждой строчкой кода Pascal или C. Но почему-то современным программистам это знать не хочется…</p><p id="ee39f427-bb1d-48a6-9ec8-ac47b3bc0c04" class="">Научная организация инженерного труда. Читает Б***** Ю.И.</p><p id="1f38de6f-5638-4163-b96e-9521e7b83509" class="">Предмет как бы о ГОСТах, которые используются в инженерной деятельности. Также вялая попытка рассказать о требованиях оформления курсовых и дипломных работ. Скучно, неинтересно, преподаватель читает с бумажки, даже не пытаясь объяснить смысл четырех букв ГОСТ, формируя стойкий рвотный рефлекс к ним в дальнейшем.</p><p id="eac0e434-6321-4e07-ab15-ad087c4b1826" class="">Технология разработки программных систем. П****** Е.К.</p><p id="8245f0ca-25bb-4a9b-b67f-29a1caab7de0" class="">Оооо. Это особенный человек… Весь курс не покидало ощущение, что он и сам не в курсе как разрабатываются программные системы. Курс построен на книге И***** Г.С. Технологии проектирования. Намного проще прочесть эту книгу.</p><p id="09f1ca37-dabd-4b5a-b29d-89a7a8b2f714" class="">Лекции скучнейшие, представляют собой перепись той самой книги к себе в тетрадь. Ничего не говорится о современных технологиях проектирования, ну и конечно нет никаких живых примеров.</p><p id="f50f3cd1-7616-4e37-b3ce-ab3da01c935b" class="">Защита лабораторных работ – это отдельная история о том, как ты сидишь по несколько часов, вымучивая из себя четкую последовательность слов, которую хочет услышать от тебя ЕК. Помню, как он целый час мучал одногруппницу, которая сказала «они несравнимы», а надо было «их нельзя сравнивать».</p><p id="9d386b5b-da61-4c14-985e-0032968e815b" class="">Рубежные контроли… Они автоматизированные. Он написал свою систему тестов, а тесты содержат варианты ответов похожие друг-на-друга и подразумевающие, что ты должен знать лекции НАИЗУСТЬ. То есть не понять, а зазубрить. В конечном счете все сводилось к тому, что мы находили способы взломать его программу и запомнить ответы.</p><p id="c4df8cfa-6600-4ed9-ab9f-2ab0798a0fb1" class="">По этой дисциплине предусматривается курсовая работа (в след.семестре) на которой ты разрабатываешь программное обеспечение (на свое усмотрение) и описываешь этапы проектирования, сопровождая это все соответствующими схемами.</p><p id="5544de92-8c64-4e3a-951b-aef443c54f47" class="">Прикладная теория цифровых автоматов. Г***** А.М.</p><p id="ed7162bc-3f59-442f-bf78-09f595c81e8d" class="">Интересная дисциплина. О том, как проектировать цифровые устройства при помощи автоматов Мили и Мура.</p><p id="d23bb709-b7cc-48b5-8da8-8b4c40a99224" class="">Третий курс.</p><p id="7e524f0b-5465-430a-b712-50c0c2938649" class="">Операционные системы. Лекции П***** Е.К.</p><p id="609d1db6-efef-4317-9942-3895a2bcc60e" class="">Пересказ Танненбаума. Скучные и неинтересные. РК также полностью автоматизированные с вопросами из серии: “вот 5 определений ОС, определите какое здесь неверное?”</p><p id="83b585e7-f55c-4dbc-82cb-3672450ae1bf" class="">А вот ЛР были очень полезные. Их вел М******* В.Ю. (он сам «линуксоид» со стажем). Лабы связаны с знакомством с базовыми командами Linux, а также с простейшими операциями в этой ОС. Приобретенный опыт не раз пригодился в профессиональной деятельности (когда приходилось сталкиваться с линуксом). Эти лабы пример того, как должны проходить ЛР. Преподаватель знал ответы на большинство вопросов, многие вещи объяснял и рассказывал почему так, а не иначе; также задавал интересные вопросы на защитах.</p><p id="225cd139-f98a-41f1-bff9-6d4c05c8e32d" class="">Сети и телекоммуникации. Лекции и ЛР З***** М.А.</p><p id="e811ae39-76b0-4780-8502-f3d4210704b0" class="">Отвратительный курс. Лекции представляли собой чтение (а точнее бубнеж) того же Таненбаума (только другого тома) с планшета (и слышно это было обычно первым двум рядам).</p><p id="60af0d1a-d042-4e49-a4bd-b6b512624265" class="">Лабораторные работы представляли собой создание виртуальных машинок, объединение их в одну подсеть, создание домашних групп… Лабы кстати вообще написаны не им, а взяты с Интернета. Никакого тебе профессионального оборудования, о котором пишут на сайте приемной комиссии.</p><p id="a195b09b-fd63-4f94-bedf-3febf738a812" class="">Схемотехника. Лекции ведет З***** М.А.</p><p id="9486d09f-11a4-491d-8dc9-a79f349a2416" class="">Вся Схемотехника свелась в пересказ Википедии, в общем можете сами догадаться о качестве проводимых занятий.</p><p id="f2ab15ba-d6b9-4c5b-8c05-bbede54cfa44" class="">Лабораторные работы вёл и ведёт А***** Б.К. В силу своего возраста ему тяжело уже что-то объяснять, он плохо слышит, поэтому порой приходилось кричать ему в ухо. Отчеты он заставляет писать от руки, потому что «британские учёные выяснили что так запоминается лучше», понятно, что это попытка исключить списывания (поскольку ЛР не меняются десятилетиями). Но если ты не хочешь ничего понять; то хоть испишись ручкой в листок -ничего не изменится.</p><p id="f0dc6994-985c-46bd-a44c-61dc3decb3e2" class="">Из-за всего этого у студентов формируется четкое ощущение, что предметы, связанные с железом, ведут «старые пердуны» и они даже не пытаются изучать эти вещи.</p><p id="46f76174-915c-423e-92d6-829e9ee165ba" class="">Конструирование и технология производства ВТ. Н******* А.В. и Я***** И.А.</p><p id="e5fdb686-62d2-4643-a062-6f765d9df2ff" class="">Лекции посвящены рассказу о процессах производства вычислительной техники, вспоминаются лекции о производстве печатных плат, отдельное внимание уделено ЕСКД. Преподаватели - это практики из компании “РТСофт”. Но на наш взгляд, к моменту, когда приходят данные преподаватели, подавляющее количество студентов ничего про конструирование и производство слушать не хотят.</p><p id="ef3e5a66-761a-4e79-8760-6bcbf0950763" class="">Были интересные лабораторные в САПР SolidWorks, моделировали такие ситуации как воздействие температурой, механические удары и т.п.</p><p id="4dcc62f7-63dd-497f-a143-6c003b9c8a7f" class="">Микропроцессорные системы. Ведёт Х***** В.Я.</p><p id="f77d017e-3bc4-465b-96a5-394916dfbb3b" class="">Также один из аксакалов кафедры. Лекции являются пересказом его книги. Студентам обычно также не нравятся его лекции, потому что «нудно, тошно, душно». Но с другой стороны, как можно рассказывать про архитектуру процессоров, состав команд, протоколы передачи весело и задорно? Изучать эту дисциплину преподаватель не вдохновлял (более того, характер у него, мягко скажем, специфический), тут скорее решало собственное желание чего-то понять и разобраться.</p><p id="42f09fa1-08fc-4c9e-ab8b-3d013ca9a4ce" class="">Организация ЭВМ (2 семестра). П**** А.Ю.</p><p id="e6f12c04-b919-40ad-b29a-4facf31f0d95" class="">Дисциплина посвящена изучению методов проектирования электронно-вычислительных средств. Отдельный упор сделан на проектировании цифровых устройств с использованием ПЛИС. А. Ю. - безусловно человек, который понимает на 1000% свой предмет, также является практиком, разработал (совместно с командой студентов) свой процессор (Leonardo). Но (!) лекции его слушать тяжеловато… Потому что говорит он быстро и иногда складывается впечатление, что ведет он их для людей, которые со всем этим давно знакомы и все понимают (но по факту это не совсем так).</p><p id="3b079576-285e-410d-ab9b-13b6b990ed92" class="">Программирование на ПЛИС - интересно, но очень специфично (здесь просто так слету не возьмешь и не запрогаешь), придется попотеть, но Попов всегда готов ответить на вопросы и помочь советом.</p><p id="7105586f-ebab-424d-96ef-989c7b2a5394" class="">Лабораторные работы ведет И****** С.В. Очень крутой человек! Это тоже пример того, как нужно вести ЛР. Человек полностью осознает, о чем говорит, а защита работ превращалась в увлекательную дискуссию, из которой всегда выносил что-то полезное. Спасибо ему!</p><p id="304afcf4-728d-47e3-8e7c-29dbee82b641" class="">Теория информации, методы и алгоритмы сжатия данных, архитектура больших ЭВМ (4 курс). С***** Е.В.</p><p id="d14c117e-e7b3-4201-a317-5059df3d5a51" class="">Как правильно отметил один студент: «Мы поняли, что она не поняла, о чем ведет дисциплины; Но она, похоже, этого до сих пор не поняла…». Абсолютно проходные дисциплины, на которых мы в основном занимались своими делами.</p><p id="dc493130-1177-4309-8d4f-927c339fb882" class="">Четвертый курс.</p><p id="9298231b-affc-4503-9baf-f450fdd41f51" class="">Математическая логика и теория алгоритмов. Г***** В.В.</p><p id="f8808ddb-e242-4a44-9df8-1f2136869cae" class="">Данный курс оказался достаточно занимательным, так как позволяет взглянуть на все остальные науки под углом сухого вывода, отбрасывая мишуру, навешиваемую предметной областью. Как было сказано на одном из первых занятий: «Данная наука занимается доказательством всех остальных». С другой стороны, данную дисциплину можно рассмотреть с чисто философской точки зрения, собственно, с которой она и началась, тогда она откроет путь к пониманию языка многих философов-логиков. Еще одним аргументом в пользу данного предмета идет некоторая наследственность некоторых предметов, изучаемых в магистратуре («Теория научного познания» и «Проектирование интеллектуальных систем»). Да и вообще, была занимательно на парах решить какую-нибудь логическую задачку, так как для этого необходимо скорректировать образ мышления, даже перестроить, в каком-то смысле. Из всего вышесказанного можно сделать вывод, что посетить данный курс можно, а в некоторых смыслах - даже нужно.</p><p id="e0055dbd-5b83-4027-8518-26f71a832a84" class="">Процессоры цифровой обработки сигналов / Технология разработки средств ВТ - C******* А.А. и Х***** С.А.</p><p id="cf47369c-b64a-4241-bd28-ec8a22bb6eae" class="">Две дисциплины совмещены в один пункт поскольку относятся к категории “Предметы по выбору” и это был первый случай, когда мы пошли на обе дисциплины и о чем не пожалели. Также они ведут курсовые работы по микропроцессорным системам (к ним мы и пошли).</p><p id="e0c1ad17-4916-400a-89d5-bee890caf9ec" class="">Два этих преподавателя являются практиками (оба работают в НИИ нашего университета и разрабатывают сложные устройства, которые находятся в серийном производстве), а их курсы - являются примером того, с чем им приходится сталкиваться в реальной работе.</p><p id="63d45b9d-65d5-4d99-9b99-b0f0887d87a4" class="">Преподаватели предложили выполнить курсовую на реальных китах (Stellaris Texas Instruments, что было реальным апгрейдом после лабораторок на STK500).</p><p id="d94965af-45e0-429c-ac08-e0e47ed2661a" class="">Курс “Процессоры цифровой обработки сигналов” был построен следующим образом: лабораторные работы были направлены на изучение выданных китов (от мигания светодиодом, заканчивая протоколом обмена CAN), что очень помогло в курсовой работе; лекции были посвящены основам цифровой обработки сигналов (одноименный курс шел параллельно) и это были лучшие лекции. Впервые вещи, связанные с математикой, не читали грузно и высокопарными словами (как это обычно бывает), а рассказывались простым языком с приведением житейских примеров (навсегда запомню объяснение фильтрации сигналов на примере фильтра воды). Впервые было объяснено для чего используются ГОСТы и как их правильно читать и воспринимать (к 4-му то курсу). Это был первый преподаватель, который говорил нам “не бойтесь ошибаться” и к нашим ошибкам подходил с полным спокойствием (что тоже редкость для многих преподов), отмечая моменты, которые мы правильно понимали.</p><p id="fbbec834-fdde-490a-b195-18ba08c9f89c" class="">Курс “Технология разработки средств ВТ” был посвящен изучению процессов разработки печатных плат. Было подробно рассказано про все этапы создания плат, а лабораторные работы были направлены на разработку своей собственной. Также С. А. уделил внимание таким вещам как методологии разработки (а-ля Agile, Scrum), лицензированию программного обеспечения и системам контроля версий (к 4 курсу это был первый преподаватель, который затронул эту тему). Его рассказ сопровождался не просто перечислением того чего бывает, а также подкреплялся своими впечатлениями и примерами из практики.</p><p id="0fd45099-ec7a-46f8-ac79-0c7d58b3451a" class="">Также мы слышали, что они время от времени привлекают студентов к реальным работам.</p><p id="e32cf45e-f0d1-4b60-a946-4f0e59a1b4a4" class="">Теория систем и системный анализ, Защита информации - Б****** Т.И.</p><p id="adf56b7a-321a-445d-99c3-d9408aa57b1e" class="">ТСиСА - дисциплина, направленная на изучение методов при помощи которых можно описать модель любой сложной системы или процесса (ее особенности, взаимодействие с внешними системами и т.д). Подобные вещи являются первой ступенью после полученного ТЗ и перед началом разработки ПО.</p><p id="84360c77-d803-4e06-86e0-c98d63762e22" class="">На лабораторных работах строили модели согласно нотации IDEF0, разрабатывали алгоритмы принятия решений в условиях неопределенности.</p><p id="31c05c37-11a7-4ad6-b4a4-93e8b16ac809" class="">Дисциплина «Защита информации» - разочарование. Хотелось бы поделать какие-нибудь интересные ЛР, где пришлось реализовывать алгоритмы защиты, а по факту мы просто читали доклады про это.</p><p id="6e13ff6e-e9a3-4f09-b0d5-0de90f2fb075" class="">Беспроводные сети - З***** М.А.</p><p id="52654427-dc0f-411c-a57c-3e4d403e46c9" class="">Ну уже можно догадаться из лекций мы ничего путного не узнали. ЛР представляли собой задания на оборудовании Cisco, правда методички были также взяты непонятно откуда и содержали кучу опечаток (наша цель была как раз их найти).</p><p id="ff28e793-b002-409b-a76f-00f130ef0f64" class="">Основы теория управления – П******** А.В.</p><p id="3d5a1271-057d-48fd-84c1-f2b6db7c0959" class="">Читал эту дисциплину сам заведующий кафедрой (он же декан факультета). Сильно в подробности вдаваться не буду, курс интересный, А.В. очень хорошо получается вести лекции, но преподают его, нам кажется, не в тот год. Гораздо лучше, чтобы он был на курсе 2. Курс посвящен изучению методов описания сложных технических систем, но не с практической стороны (типо давайте построим диаграмму классов), а с академической, опираясь на фундаментальный базис такой науки как «Теория управления».</p><p id="0f9dca73-d283-47d9-9cad-0197e98ec005" class="">Вообще было очень «забавно» услышать объяснения того, чему учит наша кафедра.</p><p id="78a4d570-b1f4-49af-92b9-130910684c88" class="">«Наша кафедра выпускает будущих руководителей!»… Вот оно как оказывается…</p><p id="f1397111-2a2e-405a-be1c-88086525c00b" class="">Дипломные и курсовые работы</p><p id="5e7b6179-3148-47d5-bbaf-16f0ae8c6149" class="">Это вообще очень смешные мероприятия, на которые без слез не посмотришь. Большая часть дипломных работ посвящается разработке мобильных приложений. Которые по факту никто не пытается разрабатывать, подкладывая красивые скриншоты. И ничего… ставят 5 и 4. Сами преподы отмечают, что уровень дипломных работ падает. Но у меня вопрос? Зачем же вы тогда ставите хорошие оценки? Студенты заранее это понимают и чувствуют, вследствие чего и начинается халтура.</p><p id="375c289e-546a-43d7-9e9d-0a6106bb02f2" class="">В магистратуре, если ты не напишешь две статьи (читай «купишь их у какого-нибудь халтурного источника»), выше 4 ничего не получишь. И плевать, если у тебя крутая тема, которую ты действительно готовил несколько лет и внедрил реальный продукт.</p><p id="f03ed484-742c-42fc-834d-50b5a6292dff" class="">Курсовые работы. Дай бог вам попадется адекватный научный руководитель. Все курсачи сводятся к правильно оформленным бумажкам по ГОСТам, к слову сказать, который у каждого преподавателя свой.</p><p id="8a7b68e8-d4bc-41b2-be1f-1adbbc315ea9" class="">На кафедре работает принцип: лучше сдать первым, тогда гарантированно получишь хорошую отметку. А если ты решишь подразобраться, задержав работу, то у тебя все шансы получить три или отправится на допсу.</p><p id="d014f477-54d3-4ba2-bc98-3474d77a90b4" class="">Гуманитарные дисциплины. Во многом зависит от преподавателей. Были интересные курсы с креативными заданиями, а были и очень скучные, где преподаватель и двух слов связать не мог.</p><p id="fd549f99-2a35-4506-8ae7-4b266fc09091" class="">Часто спрашивают про английский язык. Зависит от преподавателя. Нам повезло с педагогом, она старалась подобрать нам интересные задания. Но если хотите повышать свой уровень, то лучше идти на доп курсы.</p><p id="f3407e27-25f4-489f-a010-da10987bbdef" class="">Деканат и люди в целом.</p><p id="d0abc742-36e4-4be6-bd0a-3fc1a0ee145d" class="">Деканат (от инспекторов до замдеков) - это не самые адекватные люди (есть приятные исключения, но таких крайне мало). Я понимаю, что порой мы студенты сами во многом виноваты, но деканат - это место, где на тебя могут просто взять и наорать (просто потому что кто-то перед тобой испортил настроение). Это место, где за даже мааааленькую твою провинность на тебя наорут, наедут, нахамят. Но (!) если они сами допустят какой-то косяк, то промолчат и виноватым все равно будешь ты (ага, готовьтесь)</p><p id="641ab413-7aa1-4701-80a1-19b977518674" class="">Есть определенная особенность в Бауманке - тебе почти никто никогда не ответит нормально на твой вопрос. Чтобы что-то найти нужно пройти адский круг по куче кабинетов. Сайт университета - один из примеров (хрен, что там найдешь). Везде кричат про «бауманское братство», а по сути оно работает только в узком кругу твоих одногруппников. Никакого взаимоуважения и желания помочь внутри университета.</p><p id="15137c26-f595-4bf6-a0db-0e2795a54f95" class="">Общаясь с ребятами из МФТИ, ВШЭ понимаешь, что у них все более организованнее и воспитаннее.</p><p id="de96c70e-5d05-4220-880b-2b95171e4887" class="">Эпилог.</p><p id="d75ee362-baa7-4066-bddb-6e833b0a912f" class="">В данной статье мы постаралась достаточно подробно описать свои впечатления об обучении на кафедре “Компьютерные системы и сети”. Мы попали в тот момент, когда на кафедре начались переходные процессы. Руководство пытается искоренять хардварные дисциплины, постепенно заменяя их на “модные” программистские (и большой вопрос о качестве этих дисциплин). Но по факту получается, что кафедра начинает терять свою уникальность, становясь то ли ИУ5, то ли ИУ7.</p><p id="86d99407-3e06-4ca9-aec5-dd5bec2cd7ce" class="">Можно услышать много красивых слов о бигдате, машинлрнинге на кафедре, но по факту этому не учат.</p><p id="c1bd7d0b-c550-4c7a-b6b1-8e0171ce6202" class="">Из минусов: почти все преподаватели в университете оценивают знания по принципу «ходил на занятия – 5, если не ходил – то выше 4 (а порой и 3) не мечтай».</p><p id="234e3e17-c7b2-4026-a2df-2257a5066efa" class="">Почему-то у многих молодых людей предвзятое мнение, что преподаватели в возрасте не способны нормально преподавать и нужна молодая кровь. Безусловно есть примеры преподавателей, которым уже пора на пенсию, но мы успели застать очень крутых преподавателей (которые намного лучше некоторых, пришедших на замену).</p><p id="42cff471-9266-4a46-b125-b3a70288c46b" class="">Учиться на кафедре не сложно, чтобы вылететь надо ОЧЕНЬ стараться (читай “совсем ничерта не делать”). Минусы безусловно есть, но не все так плохо как порой описывается в отзывах. Почему-то многие студенты ждут здесь только программирование, пропуская и не пытаясь вникнуть в много других интересных дисциплин. Главное помнить следующее: задача ВУЗа (любого) научить вас УЧИТЬСЯ и добывать знания самостоятельно.</p><p id="bd0eabb9-3fdc-4dfc-b1d9-96b72b53b1f0" class="">Безусловно, многие вещи находятся в отрыве от реальности, но на кафедре есть люди, которые готовы протянуть руку помощи и научить чему-то. Но почему-то большинство предпочитает этого не замечать.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

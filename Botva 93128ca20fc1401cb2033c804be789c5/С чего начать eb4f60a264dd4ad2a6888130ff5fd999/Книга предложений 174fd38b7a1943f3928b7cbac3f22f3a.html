@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Книга предложений</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="174fd38b-7a19-43f3-928b-7cbac3f22f3a" class="page sans"><header><img class="page-cover-image" src="%D0%9A%D0%BD%D0%B8%D0%B3%D0%B0%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8%CC%86%20174fd38b7a1943f3928b7cbac3f22f3a/d2c8e870c782a15a8f3a282fd586fd8c.jpeg" style="object-position:center 44.32000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/gradebook_yellow.svg"/></div><h1 class="page-title">Книга предложений</h1><p class="page-description"></p></header><div class="page-body"><p id="a93c0b94-2fa0-4b3b-af06-2352bb7880c0" class="">
+</p><p id="fa3d5027-490e-457a-a816-52b46d1f2d5b" class="">Одному человеку на под силу найти и добавить в ботву все материалы, которые скидывают в бесчисленное множество бауманских бесед. Для этого мы сделали такую страничку, на которой вы сможете прикрепить любой файл, написать предложение, заявить о желании работать с нами и тд.</p><p id="316f3894-a552-4420-bdde-8471807efc69" class="">
+</p><p id="8cb8e0ff-a309-4539-8d1b-3f5af61fad93" class="">Для того чтобы поддерживать порядок, редактирование на данной странице запрещено, зато разрешено комментирование (Если возникли сложности, загляните в эту статью:    <a href="%D0%9A%D0%B0%D0%BA%20%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20notion%206bac03754e9a4473a18d162a113b5021.html"><img class="icon" src="https://www.notion.so/icons/chat_yellow.svg"/>Как комментировать в notion?</a> ). Просто напишите комментарий на свободном предложении и мы его обработаем)</p><p id="7281475f-0e57-4cd1-9121-994559ab6c8f" class="">
+</p><hr id="7925adc3-7ddc-43d9-a8ac-4b1062cbeeef"/><p id="cfec7522-507b-4a74-b543-749c00ba0e86" class="">Предложение 1</p><hr id="9569b006-b2a5-4686-a038-42e2eeb164f8"/><p id="e9934224-aa1e-4af9-af43-8c49a5c70fb8" class="">Предложение 2</p><hr id="541b328d-efdc-4cd2-9f0b-3164529a7224"/><p id="690a52d9-63f6-403e-9646-87a2e9dca9ce" class="">Предложение 3</p><hr id="e6ee0256-5b77-41eb-89ac-72450e40c7ac"/><p id="3622ad69-0f34-4410-8163-2c7f9a117eb9" class="">Предложение 4</p><hr id="3ac161fd-651d-4b99-b937-bf4081738ac7"/><p id="d5276e4e-7e24-48d2-86e1-a9e6f6fbad4a" class="">Предложение 5</p><hr id="f17f3645-43bd-4192-b25b-5e33384c44ab"/><p id="34962344-bd1f-4022-8fe5-b54fd2e1d355" class="">Предложение 6</p><hr id="873cd39a-27e0-47b8-9174-b957f8541f4b"/><p id="6644129c-6498-4d09-a68d-0b5a3e5dc732" class="">Предложение 7</p><hr id="ad9267f6-6133-4ad5-8188-5e64c5189181"/><p id="83d993f9-0eb5-4f4f-b660-565eda958b27" class="">Предложение 8</p><hr id="0612483d-cbeb-4e26-a06f-213795dcfe48"/><p id="9c8fbdc8-e47e-4c6f-816c-8303a55b8665" class="">Предложение 9</p><hr id="9a950fc7-ede5-4e13-af16-636d16786984"/><p id="3ae1b7df-86f1-414e-8c69-f6d1f90f5435" class="">Предложение 10</p><hr id="c2e31d3e-058e-4d0a-adff-5c88bb26ebd8"/><p id="0fb55a1f-5004-4186-abbc-c46c3749b2c5" class="">Предложение 11</p><hr id="aece2c5c-3713-413d-9ddc-aace9a4dedb7"/><p id="79e727c1-4df1-46c3-960c-9895c60458c3" class="">Предложение 12</p><hr id="5afb58d6-cb17-40fe-b6f2-3248f56655c8"/><p id="23e51797-1f1e-4112-a487-cf938a363632" class="">Предложение 13</p><hr id="097bb772-6df0-4f7e-8874-027b0e2a7df9"/><p id="eb05a360-4fb4-43d3-9abe-ec571652c85e" class="">Предложение 14</p><hr id="dba953c6-cccd-451c-9385-107678c83c38"/><p id="ecceced5-4919-4c96-89fd-19e27949aa92" class="">Предложение 15</p><hr id="2953b552-e638-4734-b350-85195709353f"/><p id="dce4f4c3-3442-4624-a9da-65e90be9dd7e" class="">Предложение 16</p><hr id="7e68db58-5252-45dc-a8b9-e017f69787ac"/><p id="7387c3d9-d8ee-45de-b733-ebbd9259766e" class="">Предложение 17</p><hr id="492d40e9-f444-4431-91d1-529efa1d4d85"/><p id="d5029ad7-872f-4b3a-8e62-b73fd636f0ac" class="">Предложение 18</p><hr id="ed6df0dd-dd44-451e-99ee-7ff75e985755"/><p id="56785680-5795-48e6-b9ec-b338f7cbbcf2" class="">Предложение 19</p><hr id="8ffc55ca-956c-4d65-9ef6-4fd7c5d92f2a"/><p id="15a5c87c-3ba2-4b3d-bfed-285ec716b971" class="">Предложение 20</p><hr id="41c25896-03b1-4d0d-9893-6211706da5fb"/><p id="36a1761c-c470-440f-8e47-623d9bbef4f6" class="">Предложение 21</p><hr id="66b00e86-f22b-42db-a49e-88542db936a2"/><p id="fa67cf26-516c-48cd-9aa1-cab55dc04411" class="">Предложение 22</p><hr id="467db553-82e6-43cc-b846-75538ad4e772"/><p id="f38aef68-e5ca-4a5e-a97b-380b4397c0df" class="">Предложение 23</p><hr id="360a26e4-bef6-4fdd-a0ec-b6f8f9bb4c18"/><p id="24a3ba64-b9c2-4467-9e47-a075863b1954" class="">Предложение 24</p><hr id="be93aaeb-870a-474e-b550-82a6ce27007b"/><p id="9c916cdc-afcc-45c5-9ca9-dc2973f388e9" class="">Предложение 25</p><hr id="4238eb66-772a-451b-8ef9-4bad1ff7cc57"/><p id="5b6bb936-8b3d-4171-ad28-6318caad8011" class="">Предложение 26</p><hr id="a916d970-b671-4e99-9674-401bac5c464a"/><p id="cc7e9046-8d76-4218-af11-2299d03c22cb" class="">Предложение 27</p><hr id="9fcf002e-0358-4fed-8a49-f3d22d86eca2"/><p id="acdf7966-3fcb-4c6f-b6c0-ca7e5bf566bc" class="">Предложение 28</p><hr id="fec26793-4f1b-4d89-bd52-475115e50211"/><p id="4fa8420a-7662-456b-bcac-12ed08190911" class="">Предложение 29</p><hr id="b6be1cb3-1895-4a79-9f8a-fa1a29fd6182"/><p id="151912ab-c610-4bd2-a33f-344623e1d66b" class="">Предложение 30</p><hr id="9304fd69-f886-495c-875d-81733aaa9cc4"/><p id="687a66ad-41aa-4bcb-bad3-bf2ea9f3713c" class="">Предложение 31</p><hr id="53ab11c5-eb8b-4231-a35d-eaeae433de82"/><p id="91c6491f-6c5f-4e82-a806-d433020974ed" class="">Предложение 32</p><hr id="f3785bda-1af2-4e65-aa69-0e79d4b126db"/><p id="3cce34b3-afeb-4601-aeed-c2cf71b55ad0" class="">Предложение 33</p><hr id="464745c4-9289-4335-bddd-0c131a7c66d0"/><p id="5a1e65e4-57ee-4c51-8f14-b9bb1613d363" class="">Предложение 34</p><hr id="53c7e595-9244-4b77-b675-6fc514d2b5ff"/><p id="ffb4de04-615a-4530-a82d-e764422f432f" class="">Предложение 35</p><hr id="a4c3944d-0f98-4f9c-bed6-a3d0295c4d27"/><p id="1706d547-d246-46e2-9af4-f9a0f5b262d4" class="">Предложение 36</p><hr id="4bf868b3-786f-42c5-86d9-ee6334f2b964"/><p id="b7862b5b-51da-4546-84dd-a63dec31ee51" class="">Предложение 37</p><hr id="bc3df63a-82df-4c84-bb0a-e8eb8635753e"/><p id="a242332b-01f9-4d1d-b08e-3123f587a278" class="">Предложение 38</p><hr id="d72d86ba-11b4-4565-ac0f-0f41ca569309"/><p id="a63bd583-1593-4deb-a356-094906d89143" class="">Предложение 39</p><hr id="f2ed1612-1856-4f42-a882-72281ec87151"/><p id="d62495d6-17ec-41ec-8e7a-ad14125be525" class="">Предложение 40</p><hr id="9c081bf0-19b3-4b10-8260-0bfc5ee8e811"/><p id="2f46f969-5507-4473-a99f-e45721ce0e36" class="">Предложение 41</p><hr id="b5c8200d-a533-4e3f-a03f-22522ea5eb53"/><p id="38574c5d-6950-4b4d-bd83-7b28a7332aa8" class="">Предложение 42</p><hr id="f15d8e90-0ac8-4c66-be12-a03a267834d8"/><p id="95468f7d-b6f1-48f5-9acb-41160fd4b7dc" class="">Предложение 43</p><hr id="7765b47e-cd57-42f5-8b47-526466e5f94b"/><p id="1c761867-d8c8-4623-8f72-0276834f56c7" class="">Предложение 44</p><hr id="7e622957-6d6d-4c47-809b-3073829f1d2a"/><p id="cd16b3ab-03b4-41fa-afd7-8ea13dc7890b" class="">Предложение 45</p><hr id="1a1ad886-4702-4dcd-ac2f-c137c5ee5d4f"/><p id="7008b7a4-b1bb-48dd-bb7e-3a7e151b28cd" class="">Предложение 46</p><hr id="1e4d12e5-c8e8-4baf-8ee1-89b12aad3944"/><p id="1692dfe1-4c4c-4613-882a-2f4988e3307d" class="">Предложение 47</p><hr id="25fb8987-65ce-4640-aa1e-7c7099151545"/><p id="4931de39-d880-4d87-962a-a9e99d179206" class="">Предложение 48</p><hr id="9a36fe03-0ade-4c8d-9bfa-353ae5891d41"/><p id="ae0b0830-ebbc-4bff-903e-de8288d4bcef" class="">Предложение 49</p><hr id="737a9d0e-db13-4225-98ec-38d082f2f516"/><p id="61df1ee5-25cd-4e6e-86d0-3a2c7287b4de" class="">Предложение 50</p><hr id="5de1f5d4-44c4-42fa-8fe2-6afc8dd09035"/><p id="b1ec9992-aa39-42aa-947d-d3f527922814" class="">Предложение 51</p><hr id="a8956c19-0048-4ba7-b480-7da8c0173e08"/><p id="ee8d34cb-676f-45b5-b4d1-8b29482ccae8" class="">Предложение 52</p><hr id="313391bf-17f9-4dd3-85b9-c2039fbe0bda"/><p id="4ce6a69c-2375-4285-9788-e9a985d9bf1f" class="">Предложение 53</p><hr id="1eb660a5-babb-4554-b91b-0e75bbb1b9e0"/><p id="74d09168-a769-48c3-a3a0-235255dc1556" class="">Предложение 54</p><hr id="20385afe-9615-4875-8c45-a1f2a81ca969"/><p id="219b85e9-45ea-46e3-9590-531ee04d8a7e" class="">Предложение 55</p><hr id="42516c4e-2bb3-4610-a5da-9759276f97ab"/><p id="74c67136-bd76-4204-a502-796d09d3bc57" class="">Предложение 56</p><hr id="e58191a2-ddf4-44d1-9cbe-5b8d736d1057"/><p id="1f1829e1-947a-497a-bd95-c8c991b3d610" class="">Предложение 57</p><hr id="4567bd2c-aab1-4075-90d6-3c8b9bc3a3e7"/><p id="a18d3916-dad6-4c79-a132-20ea5c43c321" class="">Предложение 58</p><hr id="72e73ec2-bd03-47d2-880a-6c2d41b1df7e"/><p id="3f68be01-2bfd-4c4e-b920-34ffdac1af19" class="">Предложение 59</p><hr id="f0682924-93db-42c6-987d-5b023ce19892"/><p id="ee870af3-f669-44e2-9f84-e2e26b6c5db2" class="">Предложение 60</p><hr id="2b7962be-a3bc-4d53-8491-ffab52deb60f"/><p id="2a4c6f20-8206-4000-bcbe-1b07452f9716" class="">Предложение 61</p><hr id="71521ecc-15e5-41aa-9bbf-73bd9297585a"/><p id="bd8c456e-5a51-4591-a715-d8939dbca20f" class="">Предложение 62</p><hr id="51619291-3f66-410d-b4b9-7c162342e8e8"/><p id="a7aa8501-4eb6-473d-a757-680405e8d2f5" class="">Предложение 63</p><hr id="6f87665b-43d4-4d0f-8514-2e89b9ce352b"/><p id="e9b53b5b-a14c-4c75-9ffa-03b3d5104b87" class="">Предложение 64</p><hr id="6c026c14-4a0a-4def-8d6b-aaa72e584963"/><p id="c8cf682e-61a6-4a5a-af81-3d691f966238" class="">Предложение 65</p><hr id="a7c9c76e-52cf-414d-8c15-92797f4d7521"/><p id="30d31fc8-7a3f-4ea3-ab22-500e29fa8be4" class="">Предложение 66</p><hr id="0539e09c-f0d9-4af8-9f74-f46541a2ca22"/><p id="1d01b2e7-7e4e-4bae-95f1-fa773409ac7d" class="">Предложение 67</p><hr id="064530f7-0122-4f63-b945-4b0c7771e34e"/><p id="cd1405d1-6251-4c17-a277-8d39bc89a54c" class="">Предложение 68</p><hr id="863f541e-b1f0-4db3-8ca5-dfd92e789cab"/><p id="753e7224-919d-416f-a055-712687fb5151" class="">Предложение 69</p><hr id="6d68ae7a-8f28-47b5-9738-bf129ca00334"/><p id="b6afd902-4ad6-4051-beb5-99c9708fc141" class="">Предложение 70</p><hr id="5e329335-67a8-4127-901d-075f7570f269"/><p id="9a50bcaf-8c15-4f34-88c2-56446616293f" class="">Предложение 71</p><hr id="1376460b-f5b0-43ff-b60d-df34b6b36d1b"/><p id="d6c69583-5ff3-463f-8984-934a49b74cd6" class="">Предложение 72</p><hr id="c4ce9303-34d3-4f4c-b28e-91223184a05a"/><p id="3c1576e3-e11a-4b86-b2cc-ef4f27c75ab3" class="">Предложение 73</p><hr id="77475dba-54b7-4ff8-ad07-087ce2b24716"/><p id="e9b02a17-5f40-4db0-a0e0-58574d73270f" class="">Предложение 74</p><hr id="e8a89d90-6fc7-49aa-ba1f-709aa769559c"/><p id="b0cfe148-d9b3-4b1a-91f4-656fae61ad1a" class="">Предложение 75</p><hr id="8a72393d-c08e-46e9-9405-0dc9ea13823c"/><p id="e860ef26-c859-4aab-afb1-7f7f7b339192" class="">Предложение 76</p><hr id="d4dbef67-eb17-4af7-85f8-39ca891ffe51"/><p id="be5355b2-7af6-4c1a-8fd4-962f6e7a5a4d" class="">Предложение 77</p><hr id="a5a00057-0195-46c5-ab3a-adba737ad39e"/><p id="4f710cf5-aba0-480a-b811-a848399e13a8" class="">Предложение 78</p><hr id="77ae4c49-2b1b-40df-87d8-5d5a7128fac2"/><p id="96431b74-301d-4fa4-bce8-027dc5560b0d" class="">Предложение 79</p><hr id="137d22d7-5214-4cac-9f05-3c47b566bc5b"/><p id="6467eae4-f2c6-47b5-9d25-ca0f985bd965" class="">Предложение 80</p><hr id="a28afe59-45c2-4ae4-b2bd-0b870d3271b7"/><p id="3208a9b0-c651-48ea-b8ac-7e67b8ab7e68" class="">Предложение 81</p><hr id="ee4aa965-73d4-4753-b1a9-0a2fc524abe8"/><p id="0fcb1727-5770-43ec-adea-29ee2628b63f" class="">Предложение 82</p><hr id="5b6fdd8a-9408-4328-bc35-640bead419af"/><p id="c48b5cd6-4a92-409a-9680-e62ce657302d" class="">Предложение 83</p><hr id="af14eb6a-8c2a-41f6-8a3c-c1b2633a8e20"/><p id="feb1f2cd-8e25-49ab-ba21-3c03d6e70ac9" class="">Предложение 84</p><hr id="4954a4bb-1255-4f23-a0ba-b5a257f48e67"/><p id="2042d731-afc3-47ea-875d-63315bf11609" class="">Предложение 85</p><hr id="7ef684b0-0c46-485a-a644-670143f404fd"/><p id="503d719a-0733-428d-b5e2-27c4a344c2bd" class="">Предложение 86</p><hr id="f20434f9-5c4b-41d8-90e8-32cba9bbd61d"/><p id="b48aa069-fc40-4f37-941e-75489a78fced" class="">Предложение 87</p><hr id="87a9317a-deb3-4006-9a40-8559cf7ca4d5"/><p id="a845124e-389f-4242-83b5-049cea5e1563" class="">Предложение 88</p><hr id="76ef485d-3b2b-44df-b521-766f9bb588c3"/><p id="834a2f75-fd29-49eb-b835-5874fb030bf8" class="">Предложение 89</p><hr id="6f94571a-510c-4c27-a37e-4c4c01c8a367"/><p id="16602111-96a4-44a2-84c7-041997e73fd9" class="">Предложение 90</p><hr id="c4d90800-80de-4db2-8e21-6821a8e16024"/><p id="e12d1cd9-e03b-49ad-8613-ec326671c663" class="">Предложение 91</p><hr id="f0837eb9-88d8-45bf-afc0-871a66784440"/><p id="58e503c8-2fde-4bf3-9b49-11e0e6388c74" class="">Предложение 92</p><hr id="cb50e291-60bb-413f-8a1c-e3ac9860eec5"/><p id="8ca5cb21-346d-448b-ae0d-868cb09a01c7" class="">Предложение 93</p><hr id="42df7cd0-18f8-4b99-b54e-1fe715b1a6d8"/><p id="8816bc35-3471-4d51-8001-8fc4004fa5e5" class="">Предложение 94</p><hr id="b867e75d-c05e-4b17-b5b0-9f5324644e36"/><p id="1e7971b6-42d5-4963-a4a8-08948870033e" class="">Предложение 95</p><hr id="12e83516-236e-4a30-b1f6-63b5dc780c9e"/><p id="23655423-16a2-42f4-9e0e-419d5427054d" class="">Предложение 96</p><hr id="294745aa-39da-45db-a509-d345b71d4d75"/><p id="7328752e-0fbe-468c-96f8-3ab0ea78b5ee" class="">Предложение 97</p><hr id="432bb80b-9fa8-425f-b06d-21d0a9a687e9"/><p id="5f52c051-8632-4c87-a53f-3224d8acbfb7" class="">Предложение 98</p><hr id="9ef10e2f-9db0-43d5-a5a7-0484bef500f5"/><p id="fd3b62db-ab62-4f41-84d3-c8c62172980e" class="">Предложение 99</p><hr id="fa206568-8754-453f-bef2-0b3cb7169bdd"/><p id="f60841bc-7aff-4411-9858-9facbbd6cdea" class="">Предложение 100</p><hr id="51d12927-c82c-41fa-be05-41219626babf"/><p id="a5b714f2-1407-4655-9cff-950589d3e620" class="">Предложение 101</p><hr id="a75860c8-808b-4dfd-a534-db96ef98cd42"/><p id="bfe53632-4a91-4735-907a-a65890f67aab" class="">Предложение 102</p><hr id="bf8249dc-fe65-47da-b578-e6f4621ef7ce"/><p id="d701a8ae-8bca-45ee-8352-c6257aeccdd9" class="">Предложение 103</p><hr id="3d7248e6-9be6-4f2a-a309-8092698824e5"/><p id="63c677c4-ad65-47df-8667-7ec02819befc" class="">Предложение 104</p><hr id="e79601cd-af6f-4af1-b09b-d1121980e8b8"/><p id="3ed03693-bebf-4a58-87f5-614353b8b0b8" class="">Предложение 105</p><hr id="1a8c09c7-adf3-4527-9d6c-d9c5582a694b"/><p id="0736572e-68e6-4b46-a647-001fcde7f01e" class="">Предложение 106</p><hr id="064575ec-b75e-4ed0-85ab-64e5f5e33be3"/><p id="5f418fde-50a0-4271-8c8f-af5ea1cb30a4" class="">Предложение 107</p><hr id="3e8ac1d9-a215-4d34-90e0-e4ea839f2d1f"/><p id="806da831-cca8-4bca-87f1-8e7e3bb812f3" class="">Предложение 108</p><hr id="42ace378-d505-4374-b816-e1d55df3fba0"/><p id="d4fd62b7-ee1e-4dfe-9a12-2edfbc4fbd58" class="">Предложение 109</p><hr id="df39d26a-2300-4f0c-a0da-cc8d02dd5ec6"/><p id="c68733e6-c311-4400-babb-4700120b7042" class="">Предложение 110</p><hr id="57c39459-7c70-4de6-8a3d-d6155e8d7092"/><p id="4fe7f90b-c7cf-48a9-aa4b-1d27c1a76678" class="">Предложение 111</p><hr id="0d882ff8-f29e-4404-aa26-8700e82d20c5"/><p id="425bd515-cff2-4986-80fe-811d428147ae" class="">Предложение 112</p><hr id="68d00d1c-e1c3-44ba-9359-e3e1cb4a59c9"/><p id="641729c9-fc87-4988-b75f-44ee3571d201" class="">Предложение 113</p><hr id="2fce1e87-7e71-4992-9abe-a8d19e7000c5"/><p id="e317475c-1600-48a1-a417-93aff44748ab" class="">Предложение 114</p><hr id="8ca6be9f-9a40-4ae5-a323-2a3a0b4f7e40"/><p id="8fd806a9-b00c-426a-8301-e614bf08ed0c" class="">Предложение 115</p><hr id="99ec98d1-3463-4391-83c2-87ca00abe381"/><p id="7986e2da-88c1-47ac-819c-701426c643e3" class="">Предложение 116</p><hr id="b13e6abd-d2b0-4573-b0f2-62e88817cc4d"/><p id="1618ec6f-979e-417a-99e1-4f72690d39af" class="">Предложение 117</p><hr id="4a90b55d-a4db-4c80-a9d0-a098a3f7aecb"/><p id="c5b30c21-f20a-47aa-acc8-e468185addc5" class="">Предложение 118</p><hr id="3c18d077-7169-4504-8754-6efe751369f8"/><p id="072d4fc7-3854-4108-9f8f-13ffce336843" class="">Предложение 119</p><hr id="957ae8e3-6f9d-4712-be9c-35c12e32b05d"/><p id="0618269a-0f8c-4922-a617-01a55e2fc7e5" class="">Предложение 120</p><hr id="1f1a11fe-5520-4866-86bd-c633b048d248"/><p id="231b1cb1-62de-40b8-8473-4e8e79eaad82" class="">Предложение 121</p><hr id="d31e0071-2fff-44e3-a30e-e80662421770"/><p id="55278916-8785-4bdd-b204-59c48f772f2b" class="">Предложение 122</p><hr id="60fe9b9a-ee62-4c67-9b70-0495227cb0d8"/><p id="57cfadb8-91eb-4fc4-8634-37e9286e714b" class="">Предложение 123</p><hr id="e6cf9b17-6601-4c68-bbd8-3503216107a1"/><p id="d09e287b-a7d2-4e15-8ac7-8d28e1fc7559" class="">Предложение 124</p><hr id="09ec38c8-58b4-43ef-86cb-2ab14813e064"/><p id="10d4344f-4eb1-4e87-98b5-c3caca60bbd0" class="">Предложение 125</p><hr id="f702db4e-424a-4a3c-832e-49e1a88ebf0c"/><p id="e257dd17-c7f3-4c2c-9130-0d56efa452a9" class="">Предложение 126</p><hr id="e65b29ec-5021-47e8-a7a3-f76ce880268b"/><p id="1915bca4-1177-47ea-9746-d33ce7aff3c0" class="">Предложение 127</p><hr id="afa382bb-dc35-4e87-a01e-4a46c29f2417"/><p id="9ef9f992-d038-4403-9cc2-041cd4a56321" class="">Предложение 128</p><hr id="93ebf032-3417-4e46-806b-4d5beef087f4"/><p id="bd80f0fc-2e2f-4bd5-8184-3163fcf6f6a7" class="">Предложение 129</p><hr id="e7e65ebc-6b5f-44e6-897d-77e5c3180900"/><p id="82c5a8e0-821d-4417-93ab-d282e32ffdfe" class="">Предложение 130</p><hr id="c3ac5b39-e8f5-4a45-84b3-0ac9a5805165"/><p id="e88ef213-3893-49cb-bd80-0b06a822ab09" class="">Предложение 131</p><hr id="b17414d1-3d3d-443e-a209-39d102a8a506"/><p id="3ec98460-4ce0-4e49-8b7b-c81a860c9e16" class="">Предложение 132</p><hr id="1e18ce60-2f68-4c18-b870-d13132da4378"/><p id="8e744fe4-9b72-419a-9dbe-ad0ee2293bd1" class="">Предложение 133</p><hr id="8baa6497-bec5-4a59-b7d1-c0ca586815d6"/><p id="39f6318c-76cd-46e8-982d-22f1f25cb27b" class="">Предложение 134</p><hr id="ec8a8903-bf4d-4aea-adfe-acdbc67db4fe"/><p id="1c53d0e1-b57d-4123-80bf-ba12e78a4f93" class="">Предложение 135</p><hr id="920ec1bc-20b9-4cd5-af04-634cf82dbab0"/><p id="e1883f1b-c62d-4eed-9dc3-f324065ee198" class="">Предложение 136</p><hr id="f19a3069-29e0-47f7-a5cb-ced3aae970be"/><p id="f9269341-1332-4716-aefd-400adc84da90" class="">Предложение 137</p><hr id="d0be436f-8ba2-49ba-b40c-80d8b3563d97"/><p id="99387af4-e871-479e-b6b6-988a0b12b4ac" class="">Предложение 138</p><hr id="7eb5da1f-d119-4679-bcdc-135affa8b3bd"/><p id="0ebc65a7-b957-4e9d-8a99-d5f05968f291" class="">Предложение 139</p><hr id="ed42c4a5-91b2-4556-bfbd-9af730353a7b"/><p id="7cc88522-03fb-4b56-b50e-b92b453e3da9" class="">Предложение 140</p><hr id="176aabd8-bdb7-4e59-a85a-e03964ebd2c4"/><p id="a2163271-abbe-479e-878f-24b4894114ec" class="">Предложение 141</p><hr id="ee111399-7123-42b0-9aaf-af0d379757d5"/><p id="43867d25-10aa-49bc-ad08-0e51a7054aea" class="">Предложение 142</p><hr id="f8bc3171-e780-47b0-96d4-cbddaaf24888"/><p id="33251c37-67ba-4236-84df-140a845bd03c" class="">Предложение 143</p><hr id="58cd6fa7-1639-4063-a8b6-76f8dce79963"/><p id="dbdd7dd7-a846-40f3-9a68-85d8b5a7e539" class="">Предложение 144</p><hr id="cc008bb4-9fd2-4344-bf0e-6b3acc997577"/><p id="eab9e739-0643-49f5-bfad-c2583cbd7fc1" class="">Предложение 145</p><hr id="f2941525-f419-4fdb-803d-967938af247d"/><p id="769ad08e-49c0-4ff8-9181-deebba7ef1eb" class="">Предложение 146</p><hr id="3d97598f-83c0-4811-95e5-4ac6c10bba88"/><p id="c9c8e5e0-4b7d-4859-96d2-f517f2f00a27" class="">Предложение 147</p><hr id="61cf9831-c44d-45b5-884d-7ee330891232"/><p id="b2ce6e80-68a1-49d5-b249-71bde7ff3b35" class="">Предложение 148</p><hr id="90f9911c-f09d-4dbc-9130-3d78bf209199"/><p id="e10aec34-8a96-4398-8cb0-a880f8cbca17" class="">Предложение 149</p><hr id="80adbafb-653e-4ec7-af8f-2c84be3a0798"/><p id="b4dbb4e8-a6a6-4b55-87e6-74b3c09f7c39" class="">Предложение 150</p><hr id="01240a3a-7c77-4991-9818-0ea1df28cab4"/><p id="f3ca5d01-1e58-4c91-af80-963773f3c5f8" class="">
+</p><hr id="32c44d21-831f-4537-8cf3-5cae850704a9"/><div id="2b76f40e-cb26-4ca2-a8f2-28c1e6fcb882" class="column-list"><div id="ac175b47-3635-4795-a98f-220d259b56c3" style="width:81.25%" class="column"><figure id="c676433a-173a-41f6-a65e-76f9c151dfcd" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mstyle mathsize="1.44em"><mstyle mathcolor="gray"><mrow><mi mathvariant="fraktur">C</mi><mi mathvariant="fraktur">o</mi><mi mathvariant="fraktur">p</mi><mi mathvariant="fraktur">y</mi><mi mathvariant="fraktur">r</mi><mi mathvariant="fraktur">i</mi><mi mathvariant="fraktur">g</mi><mi mathvariant="fraktur">h</mi><mi mathvariant="fraktur">t</mi></mrow><mtext> </mtext><mrow><mi mathvariant="fraktur">b</mi><mi mathvariant="fraktur">o</mi><mi mathvariant="fraktur">t</mi><mi mathvariant="fraktur">v</mi><mi mathvariant="fraktur">a</mi></mrow></mstyle></mstyle></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle\Large\color{gray}\mathfrak{Copyright}\ \mathfrak{botva}}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2679em;vertical-align:-0.2722em;"></span><span class="mord"><span class="mord sizing reset-size6 size8" style="color:gray;"><span class="mord mathfrak" style="color:gray;">Copyright</span></span><span class="mspace sizing reset-size6 size8" style="color:gray;"><span style="color:gray;"> </span></span><span class="mord sizing reset-size6 size8" style="color:gray;"><span class="mord mathfrak" style="color:gray;">botva</span></span></span></span></span></span></span></div></figure><figure id="eb4f8691-77cb-4742-8a76-e2d26ab75f11" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="0.8em"><mstyle mathcolor="gray"><mi>f</mi><mi>i</mi><mi>i</mi><mi>x</mi><mi>i</mi><mi>i</mi><mo separator="true">,</mo><mi>a</mi><mi>r</mi><mi>y</mi><mi>a</mi><mi>g</mi><mi>r</mi><mi>i</mi><mo separator="true">,</mo><mi>d</mi><mi>i</mi><mi>m</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>k</mi><mi>s</mi><mo separator="true">,</mo><mi>y</mi><mi>u</mi><mi>s</mi><mi>u</mi><mi>n</mi><mi>n</mi><mi>y</mi><mi>k</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>y</mi><mo separator="true">,</mo><mi>t</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>p</mi><mi>h</mi><mi>o</mi><mi>n</mi><mi>i</mi><mi>s</mi><mi>t</mi><mn>95</mn><mo separator="true">,</mo><mi>p</mi><mi>l</mi><mi>u</mi><mi>t</mi><mi>t</mi><mi>a</mi><mi>n</mi></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize \color{gray} fiixii,    aryagri, dimlanks, yusunnykitty, telephonist95, pluttan</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7111em;vertical-align:-0.1556em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.10764em;color:gray;">f</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ii</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">x</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ii</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">a</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">ry</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">a</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">g</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.02778em;color:gray;">r</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">i</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">d</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">im</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">l</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03148em;color:gray;">ank</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">nn</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ki</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">tt</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">t</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">e</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">l</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">e</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">p</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">h</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">o</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ni</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">t</span><span class="mord sizing reset-size6 size4" style="color:gray;">95</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">pl</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">tt</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">an</span></span></span></span></span></div></figure></div><div id="829baef5-ae9f-4e0a-aa41-cadabf07024f" style="width:18.75%" class="column"><figure id="c43c00ec-3ace-4170-a398-0b8ed3c01a85" class="image"><a href="../qr4.png"><img style="width:144px" src="../qr4.png"/></a></figure><p id="e1cfe043-9269-4a8e-8454-e43bfa0792b1" class="">
+</p></div></div><p id="015e030c-5951-43d9-ab7c-1d6a6cf86cbc" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

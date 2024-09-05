@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Дедовский файл</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ffd2f726-437e-4b67-817c-b6c9a8484570" class="page sans"><header><h1 class="page-title">Дедовский файл</h1><p class="page-description"></p></header><div class="page-body"><div id="63cecf71-eab1-4a19-b596-9168e8f95d2e" class="column-list"><div id="67a5b93a-0ceb-4a6f-a245-6348c4218a4c" style="width:8.333333333333332%" class="column"><figure id="7365b651-6590-405c-8d2c-7801bc8e3cb7" class="image"><a href="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image1.png"><img style="width:254px" src="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image1.png"/></a></figure></div><div id="6a1803a1-c154-4875-be49-7c18443f2437" style="width:79.16666666666666%" class="column"><h1 id="ce3513a4-38e0-44a0-8233-07a524f1244f" class="">Гайд для первокурсников на ИУ6 “Компьютерные системы и сети”</h1></div><div id="a77f99e8-0e74-4553-949c-fe599e78636e" style="width:12.500000000000009%" class="column"><figure id="6f824d3f-6ff2-4615-9015-bdfb42563c7f" class="image"><a href="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image2.png"><img style="width:140px" src="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image2.png"/></a></figure></div></div><p id="ea022ac4-767c-4cf2-99ef-f4ea602ee593" class=""><em>“Информатика и вычислительная техника” 09.03.01</em></p><p id="b399db44-5254-44b2-8901-d775191f5814" class=""><em>“Прикладная информатика” 09.03.03</em></p><h2 id="e2feb08b-6391-4d3d-bd22-fe84eeb298b0" class="">Введение и напоминание</h2><p id="0f75d72a-e734-4c55-800a-91c97d21c92d" class=""><em>В МГТУ им. Н.Э. Баумана действует балльно-рейтинговая система. Накапливаемые во время семестра баллы + экзамен определяют окончательную оценку в зачетной книжке за предмет.</em></p><p id="6e93832a-a809-4d6c-b552-ed5b5bea140f" class=""><em>НЕУД - 0-60 баллов</em></p><p id="e6b6a133-c4de-4145-9d16-10ee5f8c4eec" class=""><em>УДОВЛ - 60-70 баллов</em></p><p id="cbdd7316-3186-4edf-9706-c16431d6c896" class=""><em>ХОР - 71-84 балла</em></p><p id="c241758b-2c49-476a-8de4-90035b06041e" class=""><em>ОТЛ - 85-100 баллов</em></p><p id="abcb0a64-44f7-42d0-bbbc-ef6692cb5dd1" class=""><em>Минимум, который позволит перейти на след. семестр - имение в зачетке УДОВЛ и ЗАЧЕТ. Предметы бывают трех типов:</em></p><ul id="469fc6d6-a6e3-499e-a45e-c6c58eb10d6a" class="bulleted-list"><li style="list-style-type:disc"><em>зачетный</em></li></ul><ul id="ecff2db3-35b4-45c3-99c7-9ebbc0e56993" class="bulleted-list"><li style="list-style-type:disc"><em>дифференциально зачетный</em></li></ul><ul id="58b4f4e9-7706-419a-9060-d076f2e1fa86" class="bulleted-list"><li style="list-style-type:disc"><em>экзаменационный</em></li></ul><p id="17659de0-9873-4434-9870-f5044edfd152" class=""><em>За зачетный ничего кроме НЕЗАЧЕТ/ЗАЧЕТ получить нельзя, поэтому набираете минимум баллов(60 и больше) и ЗАЧЕТ ваш!</em></p><p id="b3a1a9e7-1b93-488b-ac80-662938ccac59" class=""><em>Дифференциальный зачет работает точно так же, но количество баллов имеет значение. В зависимости от набранных баллов будет соответствующая оценка.</em></p><p id="e2e226ca-bd35-47d1-a1c1-b520ae51a888" class=""><em>Экзаменационный предмет - как предмет с диф. зачетом, но тут сложнее: складываются баллы за семестр(макс. 70) и за экзамен(макс. 30) и максимум получается (100). Минимум за предмет должен быть 60. За экзамен 18 баллов минимум нужно. Отсюда следует, что за семестр(ДЛЯ ЭКЗАМЕНАЦИОННЫХ ПРЕДМЕТОВ) минимум 60-18=42 балла. 60(48 за сем + 18 за экз) - это ваш нижний предел, верхний - 100 баллов, ну а личный ваш предел вы определяете сами.</em></p><p id="06c87b22-9efc-41d0-8e23-18c3f097d3a7" class=""><em>Как зарабатывать баллы во время семестра? У вас будут семинары, во время которых можно работать. Могут быть лабораторные работы. Обязательно будут РК(рубежные контроли) или КР(контрольные работы), за которые также дают баллы.</em></p><p id="73df306c-90ce-4099-b373-14c03e9a26b2" class=""><em>После вопроса “как заработать баллы?” следует логичный вопрос “как их проверить?”. В личном кабинете </em><a href="https://lks.bmstu.ru/"><em>https://lks.bmstu.ru</em></a><em>. Пароль от него вы получите после 1-го сентября в кабинете 91. Об этом подробнее в соответствующем разделе.</em></p><p id="b4637a78-8245-412d-a7b7-e4c5508f923b" class=""><em>Примечание: бюджетники(целевики == бюджетники) будут получать стипендию в первом семестре. Если один из предметов будет закрыт на УДОВЛ, то стипендия в следующем семестре пропадет. Если на ХОР, то станет, как и у всех хорошистов, а если на одни ОТЛ, то как и у всех отличников: на косарь больше, чем у хорошистов. Если закрыться два семестра подряд на одни ОТЛ(диф. зачеты в том числе), то можно будет подаваться либо на повышенную стипендию, либо на перевод на бюджет(вариант для платников).</em></p><p id="ba326d6d-aef9-4714-8c14-b252b927d2d4" class=""><em>Потерять стипендию еще можно, если не закрыл предметы до конца основной сессии, тогда придется закрывать на хвостовой сессии(такой период в начале нового семестра, когда закрываешь долги). Важно заметить, что если человек допустил кучу долгов к концу семестра, то перенести на хвостовую сессию он может долги максимум по 3-м предметам, иначе отчисление.</em></p><p id="0e3cec57-ef69-4813-82c2-efc3715b2536" class=""><em>Доп. примечание: ну а помимо балло-рейтинговой системы в МГТУ им. Н.Э. Баумана также существует система выговоров. Есть предупреждения, или вроде того, но бояться стоит именно официальных выговоров. Даются они за нарушения правил МГТУ им. Н.Э. Баумана, ссылка на них(надеюсь это актуально):</em><a href="https://guimc.bmstu.ru/wp-content/uploads/2019/02/Pravila-vnutrennego-rasporyadka-obuchayushhihsya-v-MGTU-im.-N.E.-Baumana.pdf"><em>https://guimc.bmstu.ru/wp-content/uploads/2019/02/Pravila-vnutrennego-rasporyadka-obuchayushhihsya-v-MGTU-im.-N.E.-Baumana.pdf</em></a></p><p id="b7a03767-1ad0-4ee8-b160-c5b1c8dab9c4" class=""><em>Вкратце: не делайте того, что потенциально запрещено и не пропускайте занятия. 3 выговора == отчисление.</em></p><h2 id="f296ba8b-d79f-444d-a10d-824fcc59f858" class="">Семестры и преподаватели</h2><p id="2f0cdac9-03be-4da3-98f5-d36b82733a98" class=""><em>Примечание: учебники можно брать, а можно не брать. Но они спасают на предметах, где лекции не понимаемы.</em></p><h3 id="57c97551-b0c8-4c04-a3d4-a0567497086c" class="">Семестр 1.</h3><p id="315ea1e6-f373-4a8b-bf82-63c4a9dcf684" class=""><em><strong>Аналитическая геометрия</strong></em><em>(ФН12, зачет) - там узнаете, что такое базис, вектора и матрицы. Предмет стоит знать минимум потому, что в следующем семестре будет похожий предмет(линал), где новые термины будут строиться на ангеме(аналит. геом.). Ведите конспекты и все рк и кр будут легкими.</em></p><p id="f25023cd-cec2-463a-8525-b028a12c24bc" class=""><em>Примечание: на будущее, кр - контрольная работа, а рк - рубежный контроль(как кр, но с теорией, </em><em><strong>или</strong></em><em> же как миниэкзамен)</em></p><p id="f27d07bd-eac4-4e5c-9212-9a2a559e7c69" class=""><em><strong>Информатика</strong></em><em>(ИУ6, зачет) — в этот зачетный предмет запихнули все, что плохо лежало и не попадало в другие предметы - “кратко обо всем”. Некоторый материал не очень интересный, часть может быть полезна в будущем.</em></p><p id="f08e040f-9d01-42a3-8b8f-4eb24d17fa81" class=""><em>Преподаватель: Губарь Александр Михайлович, своеобразный, но прикольный мужик. Иногда любит пожестить, но в целом безобидный и добрый</em></p><p id="01f331e7-a74d-45b7-a337-ddc12ce41dee" class=""><em>Примечание: есть собственная книжка у него в эл. библиотеке, кому интересно.</em></p><p id="8ea453da-399a-4a47-b050-ace063e6db3e" class=""><em>Примечание к примечанию: лекции из этой книжки он читает дословно, вплоть до анекдотов</em></p><p id="10d8cc68-3f4e-44d6-9c8a-58637681489e" class=""><em><strong>Математический анализ</strong></em><em>(ФН12, экз). “Это база”. Материал сложный, экзамен - достойное испытание для первокурсников, но нет ничего непреодолимого.</em></p><p id="60d8c952-e213-40f9-b388-ac3b0d62563c" class=""><em>Узнаете первую часть высшей математики - пределы, производные, увлекательный анализ функций одного переменного.</em><em><br/>Преподаватель: Обычно на нашей кафедре его читает Подзорова Марина Ивановна, очень классный лектор и чудесный человек.<br/></em></p><p id="4f1f1f02-7677-4310-9025-11efc587c29d" class=""><em>Примечание: ЗАПИСЫВАЙТЕ ВСЕ КОНСПЕКТЫ ЛЕКЦИЙ. ВСЕ ВОПРОСЫ ЭКЗАМЕНА ПОДСТРОЕНЫ ПОД ЛЕКЦИИ. Все ответы будут у вас в тетрадях.</em></p><p id="426ce39e-cf51-48ff-92e9-dd36911957e7" class=""><em><strong>Начертательная геометрия</strong></em><em>(РК1, экз) - предмет очень простой, учитывая то, что преподы понимают, что мы не РК1, а ИУ6(не чертежники). Нужны ватманы А3, циркуль, линейки, угольники, карандаши H, HB, B, тубус или папочка, куда складывать чертежи. Выдадут две тетради, которые надо будет заполнить в течение семестра и сдать на экзамене(не тяните с заполнением: за 1 раз заполнять будет очень скучно). За семестр надо выполнить будет определенное количество дз и также сдать на экзамене. Изучайте в своем темпе материал, практикуйтесь и экзамен покажется самым легким.</em></p><p id="03cec8aa-d06a-48e6-aedb-8ff99ae7c31d" class=""><em>Примечание: экзамен напоминает один из рк с доп. вопросами, которые будут в конце одной из тетрадей.</em></p><p id="9a3cbc1e-ca09-4725-94a3-f52a79c7f9ba" class=""><em><strong>Основы программирования</strong></em><em>(ИУ6, экз) — Turbo Pascal / Delphi. Как говорит ГС - мы учим не языки, а навыки программирования на примере языков, поэтому на примере Дельфи будете разбирать не особо сложные концепты из программирования. Экзамен лайтовый, если что-то знать по существу.</em></p><p id="86d17372-a8ca-496f-bd76-341e6304eaac" class=""><em>Преподаватель: Иванова Галина Сергеевна — строгая, но справедливая. Человек с огромным опытом программирования, которая с радостью поделится им с желающими (и жестоко покарает лодырей)</em></p><p id="b8361a94-7c65-44c4-8e06-5f8a0d657a11" class=""><em>Примечание: работать можно в какой угодно среде на паскале. Главное, чтоб код работал.</em></p><p id="f38c22e8-8cd8-4bb9-a01c-0a6a64df15a0" class=""><em><strong>Замечание:</strong></em><em> слушайте внимательно лекции, ибо, рассказывая материал, Галина Сергеевна скажет: “Данный вопрос я буду спрашивать на экзамене”. Лайфхак: записывайте эти дополнительные вопросы, составьте весь список, и готовьтесь параллельно с экзаменам к ним отдельно.</em></p><p id="6f9a0c9e-e230-476d-88b4-e41df1cf468b" class=""><em><strong>Социология</strong></em><em>(СГН2, зачет) - база для УЗов: гуманитарный предмет. Может быть что угодно: эссе, проект с соцопросами или чилл. Изи предмет.</em></p><p id="fa093e07-af6d-4d29-b746-8e2993fd850c" class=""><em><strong>Физическая культура</strong></em><em>(ФВ, зачет) - </em><em><strong>НЕ ПРОПУСКАЙТЕ</strong></em><em> пары. Вы можете пропустить 1 раз и пожалеть. Но надо ли вам, если уже в начале декабря можете перестать ходить на физру. Деды могут поставить здесь плюс, если согласны: +++</em></p><p id="d19f6a93-e39a-4099-9bba-3016bb93cd32" class=""><em>Примечание: </em><em><strong>НЕ ПРОПУСКАЙТЕ, ВАМ ЖЕ БУДЕТ ХУЖЕ ПОТОМ</strong></em></p><p id="f4c59f90-eddd-40d6-b4c8-05d5bce8332c" class=""><em><strong>Иностранный язык</strong></em><em>(Л2, зачет) - будет входное тестирование на знание вашего английского. Если плохо - в слабую группу или новый язык. Если хорошо - в сильную группу. Стоит учитывать, что в 6-м семестре, 3 курс, будет экзамен по английскому, поэтому думайте.</em></p><h3 id="01c9d03b-c87f-4c9e-8243-db71090c4ad7" class="">Семестр 2.</h3><p id="af48d7e4-a836-4b31-902b-811cfbba58b0" class=""><em><strong>Инженерная графика</strong></em><em>(РК1, диф. зачет) - та же начертательная геометрия(1 сем.), только тут работа на эскизах будут и лабораторные на компах, но не без заполнения бумажной единственной тетради.</em></p><p id="b4135f8f-aca6-40cf-8730-3572a0f8746b" class=""><em><strong>Иностранный язык</strong></em><em>(Л2, зачет)- тут как повезет, но все зависит от вас самих: хотите знать английский-учите, если же нет-закрыться очень легко( но экз. на 3 курсе никто не отменял)</em></p><p id="2e50a50b-d2c4-4ceb-8a0e-9afe115db3ff" class=""><em><strong>Интегралы и дифференциальные уравнения</strong></em><em>(ФН12, экз) - продолжение сказки о матанализе. Если экзамен по матану показался сложным, то здесь он будет попроще в теории, но сложнее в задачах. Если вы заметили, что конспекты лекций спасли задницу, то здесь будет то же самое. ЗАПИСЫВАЙТЕ КОНСПЕКТЫ ЛЕКЦИЙ, они вас спасут на экзамене. Из нового лишь интегралы определенные, неопределенные и дифференциальные уравнения.</em></p><p id="b0e112f9-215b-41c8-a3a8-55df2aca5cd7" class=""><em><strong>История</strong></em><em>(СГН1, зачет) - социология 2.0. На лекции Федорова явка обязательна, но он вам и сам все объяснит, семы у него пропускать тоже не стоит. Иногда дает устные рк(пересдал с 3 попытки, закрыть +-легко)</em></p><p id="636b7ff2-cb00-4e18-b57b-945470c7418c" class=""><em><strong>Линейная алгебра и функции нескольких переменных</strong></em><em>(ФН12, зачет) - улучшенная версия ангема. Отдаление вектором от геометрии и приближение их к матану. Будут изучаться линейные операторы, а также функции с несколькими переменными, градиент из этой же среды.</em></p><p id="3ee2d32b-a328-48be-a8d7-69738207e25b" class=""><em><strong>Объектно-ориентированное программирование</strong></em><em>(ИУ6, экз) - С++ 11-й стандарт изучался. Чуть-чуть паскаля требуется в первом ДЗ, ну а дальше свободное плавание в С++ и в Qt, который без VPN не скачать теперь. В лекциях все будет рассказано, как скачать, не переживайте. Язык сложнее паскаля, поэтому экзамен сложнее будет, чем в 1-м семестре. Правило все то же - записывайте дополнительные вопросы с лекций.</em></p><p id="3484b5d6-b337-4c6b-8ccb-92062f1b9393" class=""><em><strong>Проектно-технологическая практика</strong></em><em>(ИУ6, диф. зачет) - ее можно выполнить в конце, задачи там похожи на реалии, где пытаетесь создать логику(скелет функциональный) приложения(не более). По структуре напоминать будет ДЗ из ООП. Делать дольше, чем ДЗ, ибо это задание на оттачивание навыков и поиск новых инструментов(модулей). Лучше постепенно делать, когда есть свободное время.</em></p><p id="730f2707-9542-4e37-9195-2d59a38c4e9f" class=""><em><strong>Физика</strong></em><em>(ФН4, экз)- ох… Ну тут все сложно, вам будут читать сухие лекции, на семинарах листать слайды, на лабах могут помогать, а могут и отправить находить ошибку самому. Но при этом всем закрыть экзамен не будет большой проблемой: выучить весь материал реально(3 поставят).</em></p><p id="362a6c8c-ae7a-4159-9f00-b14fbc587814" class=""><em>Примечание: лабы + рк на хор + экз на 30 = ХОР. Чтобы получить ОТЛ, надо записывать конспекты лекций и показывать во время РК. А если вы монстр, то изи ОТЛ в зачетке.</em></p><p id="40998e2c-6f7e-44e2-ac1b-d6953da6fe38" class=""><em><strong>Физическая культура</strong></em><em>(ФВ, зачет)- то же самое, что и 1 семестр.</em></p><p id="1af1d9d4-8f0c-44b9-b80d-90d3c2fc8777" class=""><em>МЕГА примечание: многие данные(предметы + студенты) можно смотреть на </em><a href="https://eu.bmstu.ru/"><em>https://eu.bmstu.ru/</em></a><em>, но нужно получить будет данные от почты своей, а потом еще в гайдах где-то полазить и скачать прокси-сервер на комп к себе. Ну а если подключаться к wi-fi в ВУЗе или в обшежитиях, то прокси качать не надо будет.</em></p><h3 id="faf9b193-ad17-4ee3-b216-c99d6f938709" class="">Семестр 3.</h3><p id="7394996d-6672-4348-a8d9-5533250dfc92" class=""><em>а мы пока что сами хз :) +</em></p><p id="8bea18c8-8f40-445d-a00e-1f7ffc3f426d" class=""><em>тогда я продолжу &lt;3</em></p><p id="b0ff9e9a-c203-4093-9f9a-679e3b2256d8" class=""><em><strong>Базы данных</strong></em><em> (ИУ6, зачет)</em></p><p id="6722d06f-ec4c-41b1-9b90-17fa82710b67" class=""><em>Предмет про то, что такое базы данных и как с ними работать. Посмотрите разные модели организации БД, научитесь писать несложные Select-запросы, чтобы найти в бд нужную информацию</em></p><p id="79e87590-aedf-456c-8f1e-a1bcb90b90d2" class=""><em>В курсе 3 рубежных контроля. Все они на елернинге. РК1 наполовину состоит из вопросов “какой ваш любимый фильм?” “какие у вас планы на будущее?” и наполовину из вопросов по БД, ответ на который - это пара слов или выбор варианта. Остальные рубежи посвящены написанию пары select-запросов.</em></p><p id="007f9a3c-9a00-44cc-a661-b465ddb2771b" class=""><em>В конце семестра надо будет сдать зачет преподавателю. Абсолютный рандом - кому-то зачет проставили просто так без разговора и вопросов, кто-то ходил отвечал 5 раз (не потому что не знал, а потому что препод ждал конкретную фразу из своего учебника). В то же время мне он предложил если не помню точную фразу сказать что-то похожее на правду.</em></p><p id="ffb7228f-670b-4cda-8864-4db5baa19c0f" class=""><em>Из сказанного делаем вывод, что преподаватель - это человек настроения</em></p><p id="40a2de44-b2bc-4d8f-8dd7-c99a28ce3b4c" class=""><em>//требую на это место фотку из презы с лекции 1</em></p><figure id="b26457e6-9683-42cd-95e6-2a028dc7e492" class="image"><a href="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image3.png"><img style="width:700px" src="%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8%CC%86%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB%20ffd2f726437e4b67817cb6c9a8484570/image3.png"/></a></figure><p id="f6239fa3-a9cc-4f31-bbd2-e30f26f31513" class=""><em><strong>Иностранный язык</strong></em><em> (Л2, зачет)</em></p><p id="bd3b7dda-4f9f-4883-9807-abe7e152a17a" class=""><em>Ничего не изменилось с прошлых семестров. По-прежнему зачет, 3 РК, рандом с преподом</em></p><p id="d6945955-b041-43d0-bdf1-e598bf190c3d" class=""><em><strong>Правоведение</strong></em><em> (ЮР, зачет)</em></p><p id="5a50f7ed-8536-4750-ab6c-39c3a65f51ac" class=""><em>Послушайте на первой лекции и семинаре, какие у ваших преподов требования для зачета. Кому-то надо, чтобы вы ходили на лекции, кто-то проставляет РК автоматом, если вы что-то говорили на всех семинарах модуля. У нас обязательным условием было показать конспекты лектору (но ходить не обязательно, на сайте ЮР есть электронные конспекты. можно их еще более кратко законспектировать)</em></p><p id="779b9ea5-c3c9-460f-89f0-fee1002b7822" class=""><em><strong>Теория вероятностей и математическая статистика</strong></em><em> (ФН12, экзамен)</em></p><p id="91df3a06-e9a4-42f3-bdc5-55c42e360ac6" class=""><em>Предмет из 3 модулей: кратные интегралы и ряды (есть рк, но не входит в экзамен), теория вероятностей, основы математической статистики</em></p><p id="b791807f-2d18-4b59-ae61-34df7359b61a" class=""><em>Преподаватель обычно Горяинов В.Б.</em></p><p id="900f71f9-2b4d-4331-bd4e-dfa69d23009b" class=""><em>Человек на своей волне, очень спокойный, не придирчивый. На экзамене была ситуация, когда он смотрел в свой телефон, студент - в свой. Переглянулись и продолжили каждый свое делать.</em></p><p id="9738d04c-3fd6-46e2-86eb-59f0db0baa28" class=""><em>На очных РК если не можешь справиться с заданием хотя бы на минимум, то можно забрать билет домой и принести решенный - тогда РК зачитывается с минимальным баллом.</em></p><p id="51286745-c448-4b35-90d2-a0b84b43b78c" class=""><em><strong>Физика</strong></em><em> (ФН4, экзамен)</em></p><p id="dcb9de3d-062e-44f7-8c93-7df3b7a5cc09" class=""><em>Еще семестр Чуева. Система абсолютно та же, что и во 2 семестре. Еще один экзамен по физике. Тут про электричество и оптику будет :)</em></p><p id="7cf0e923-cfdc-4c92-951e-865ea0b4a8bd" class=""><em><strong>Электротехника</strong></em><em> (ИУ6, экзамен)</em></p><p id="35a879e4-6e2d-468e-9d9a-87a633196fec" class=""><em>Предмет про основы работы с электрическими цепями. Лектор и семинарист - человек, который хорошо объясняет предмет и с пониманием относится к студентам, если они что-то не понимают. На семинарах сам спрашивал что не получается и предлагал разобрать задачу, аналогичную дз.</em></p><p id="f13c3c81-f5f3-42cb-9a41-6ac80b87d88b" class=""><em>В РК по 6-7 небольших задач. Это на елернинге. Надо в тест вбить численные ответы, а потом прикрепить фотку черновика с решением.</em></p><p id="13e7d427-8e4e-412e-b549-491e099ab8b8" class=""><em>На экзамене 3 задачи, которые надо решить и прикрепить на елернинг. На защите не валит, может объяснить задачу, которая не получилась.</em></p><p id="3544be45-1002-4405-92b0-09f96f860494" class=""><em>Отдельно про лабника. Аксенов Н.В. - это человек, который старается понятно объяснить, что делать и как не запутаться в программе. Ко всем лабораторкам есть пошаговые видео и в основном нужно повторить за ним со своими числами и потом объяснить что сделано.</em></p><p id="06f81c78-1964-42c3-9f86-2a488ea48495" class=""><em><strong>Языки интернет-программирования</strong></em><em> (ИУ6, экзамен)</em></p><p id="04b2f58a-0d57-48fb-83a8-bee620f0c062" class=""><em>Название предмета много говорит. Уточню лишь языки: HTML и CSS, JavaScript, основная работа будет с Ruby и Ruby on Rails. Информации много, хороший преподаватель-практик</em></p><p id="a5c4a375-36f3-4bdf-a7bc-aed7afa0f88d" class=""><em>На лекциях проходят опросы. Иногда на них не получается физически успеть записать ответ, на вопрос секунд по 30. Эти опросы в конце семестра дают дополнительные баллы</em><em><br/>И потом в конце семестра есть возможность получить автомат. Обязательное условие - сданы все контрольные точки: 2 РК, 12 лаб, дз (нужно будет сделать проект с использованием изученных технологий. Например, сайт типа небольшой форум). Плюс баллы за опросы<br/></em></p><p id="6fcdb6ee-adbe-409c-85c8-7bd82c8b3352" class=""><em>Удовл и хор получаются просто по количеству баллов: с 60 и с 71 соответственно. На отл должно быть 85 (или возможно на пару баллов меньше), но надо еще поговорить с преподом - типа как защита на экзамене, но без билета</em></p><p id="a8e27d26-d35f-41e7-b0a2-13490c11479c" class=""><em><strong>Физическая культура и спорт</strong></em><em> (ФВ, зачет)</em></p><p id="aa40c9dd-9145-4f39-938e-b6eca6b4b900" class=""><em>Ничего нового. Еще семестр физ-ры</em></p><h3 id="904d493e-5f14-43db-8a53-f15d3a36133f" class="">Семестр 4.</h3><p id="78ce1a76-e951-4ebd-9268-b8dba7a632e7" class=""><em><strong>Базы данных</strong></em><em> (ИУ6, курсовая)</em></p><p id="4860815f-ffa6-4f0d-ad30-c74316da7be9" class=""><em>Курсач не сложный, защищать его обычно не нужно (просто показать преподавателю что сделано и хороший отчет). При желании и помощи одногруппника, который сдал, пишется за 1-2 ночи. Но лучше совсем на июнь не откладывать и делать постепенно</em></p><p id="c5ed3dcc-1e4c-491f-abb0-a31a968fc34a" class=""><em>Нужно будет эту БД придумать согласно своей теме (выданной или придуманной) и в этом плане схема - это важно. Если у вас есть схема, которую принял преподаватель, то реализовать базу данных дальше не сложно</em></p><p id="43eb36e5-95f9-483b-8c89-993fb7a3fa77" class=""><em><strong>Дискретная математика</strong></em><em> (ИУ6, экзамен)</em></p><p id="b2f73412-03eb-48f2-86b8-8924c82a4cc6" class=""><em>Интересны и самый простой курс математики. вам расскажут про множества и операции над ними, про теорию графов и про булевы функции. Достаточно много алгоритмов на разные темы, доказательств совсем немного, интегралов нет :)</em></p><p id="cbb5e497-8a1f-46e3-8c42-126dc4263d70" class=""><em>Интересно, что на этом предмете в РК нет теории, а в экзамене нет практических задач. На каждый модуль по 2-3 задачи. РК иногда разбивают по частям - прошли тему и через неделю в течение 30-40 минут решили задачу из РК на эту тему. В экзамене 2 теоретических вопроса, ответы на которые обязательно есть в лекциях. Домашка только одна - по графам</em></p><p id="cd759f69-5194-4fd3-97f3-e67d0d991ad2" class=""><em>Преподаватели замечательные. Гуренко В.В. объясняет материал понятно, не слишком быстро, на лекциях иногда были шутки от него (в т.ч. про отчисление, замдек все же). В качестве семинариста могут поставить Бычкова Б.И. Объясняет понятно и последовательно. Оба препода любят свой предмет и ничего плохого про них не сказать :)</em></p><p id="b46bc212-60f3-42a4-aeb0-c4b8e15192ce" class=""><em><strong>Иностранный язык</strong></em><em> (Л2, зачет)</em></p><p id="cea3664a-b546-4a44-b7a5-f0b69d874a5f" class=""><em>Ничего нового. Все еще зачет. Все еще 3 модуля и 3 рубежа</em></p><p id="694c784d-be11-42c9-93ac-5fddaea8d878" class=""><em><strong>Машинно-зависимые языки и основы компиляции</strong></em><em> (ИУ6, экзамен)</em></p><p id="86db0fae-d424-4602-b9f0-282c6d5b2d23" class=""><em>Возвращение Ивановой Г.С.</em></p><p id="736d8372-2269-44bf-aadb-902ac87cd0e8" class=""><em>И это действительно ее предмет во всех смыслах. У нее большой опыт работы с ассемблером, и она действительно понимает, что и о чем говорит.</em></p><h3 id="f93cdb24-a1de-4998-b588-f0f7bee7d2bb" class="">Семестр 5.</h3><p id="f41634f1-f4e5-43a9-a60b-d2d6da75eff9" class=""><em><strong>Курсовая работа семестра: Технология разработки программных систем</strong></em><em> - первая настоящая курсовая. На выбор около десятка разных научных руководителей (разной степени духоты), любая тема для разработки (от крупного сайта до чего-то вычислительного), защита перед полноценной комиссией кафедры.</em></p><p id="cc9f949b-6a52-4591-bd05-542eb780243b" class=""><em>Если умеете программировать — не страшно, не умеете - будет сложнее. Самая большая проблема - необходимость сделать все по ГОСТам (диаграммы, схемы, задания на разработку, руководства пользователей).</em></p><p id="e43159b7-f564-4e38-a1a4-55b26ece0846" class=""><em><strong>Иностранный язык</strong></em><em>(Л2, зачет)- ничего нового.</em></p><p id="c87441f5-71f3-48f9-9d4a-b05402b653af" class=""><em><strong>Операционные системы</strong></em><em>(ИУ6, р. экз) - не очень полезный предмет. Есть довольно много хорошего материала, который разбавлен водой и шутками лектора. Проблем не вызовет, но и какого-то удовольствия от процесса вы не получите.</em></p><p id="5f710dca-157e-4c94-8564-c2fad592d1c5" class=""><em>Преподаватель: Еремин Олег Юрьевич, замдекана, прикольный и не злобный юморист (но если его выбесить - будет грустно)</em></p><p id="726a4a2e-d0e4-4033-b023-cfe2a682a916" class=""><em><strong>Основы деловой коммуникации</strong></em><em>(СГН2, зачет) - неплохой гуманитарный курс, покрывающий софт-скиллы: умение общаться, коммуницировать по рабочим вопросам, доносить свою мысль правильно. Немного перегружен деловым этикетом (что логично), но довольно полезен. Хороший отдых от технических предметов.</em></p><p id="2b70c8d3-2021-4e62-b5cb-ff9c9b9d03db" class=""><em><strong>Сети и телекоммуникации</strong></em><em>(ИУ6, экзамен) - супер лайтовый курс. Если вам не интересен этот предмет - вам поставят три без разговоров. Если захотите чему-то научиться - можете записаться в углубленные мини-группы и заниматься по более полезной программе, а в конце сдать экзамен на сертификат Huawei (который может и экзамен заменить, если достаточно высокий балл набрали)</em></p><p id="f8b7bcd2-aa88-4f75-aeef-a7d763e79d1d" class=""><em>Преподаватель: Пономарев Андрей Дмитриевич — чилловый молодой препод, с ним можно легко сконнектится и пообщаться.</em></p><p id="4592d2ec-afb7-4ffb-9fdb-b4779a888f15" class=""><em><strong>Современные средства разработки программного обеспечения</strong></em><em>(ИУ6, экзамен) - хороший курс. Разбираются более новые стандарты С++, современные технологии проектирования (agile). На лабах учат работать с контейнерами и CI. Экзамен достаточно легкий, если самому сделать лабораторные.</em></p><p id="a654dcad-d89f-4dd9-b9a2-e33e729f1ae3" class=""><em>Преподаватель: Фетисов Михаил Вячеславович. Хороший чел, которому не все равно на то, что он делает. Разрабатывает на кафедре свой язык программирования</em></p><p id="74b88d97-0ffb-4317-ba77-b27dcb603024" class=""><em><strong>Схемотехника</strong></em><em>(ИУ6, р. экз) - весьма неприятный курс. Полезного на лекциях довольно мало, но лучше ходить, потому что конспектов нет и преподаватель из принципа требует записи от руки. Сами лекции представляют собой перечитывание информации без какого-либо нормального объяснения.</em></p><p id="6e2120e3-3665-49ed-8710-fbe9423a50cf" class=""><em>Отдельного упоминания заслуживают лабы — их сдать очень тяжело. Не из-за тяжести лаб, а из-за способа их сдачи - теорию придется писать от руки (!) и стоять в очереди на защиту по несколько часов в деканате.</em></p><p id="f4454873-ce96-4a61-89ab-d484def80411" class=""><em>Преподаватель: Захаров Михаил Александрович, замдекана, но преподаватель так себе. Очень любит убегать от студентов домой/на обед. Пунктуальность - не его конек, иногда он просто не приходит на первые пары и опаздывает на пару часиков ко времени приема.</em></p><p id="ad801b03-b475-49eb-bf53-40eebda012b0" class=""><em>Для сдачи предмета нужно закрыть все рк и сдать лабы. Если успеть сдать в срок - то пятерку получить легко.</em></p><p id="4d4f0578-7756-4924-8d5d-5063d3c9308e" class=""><em><strong>Физическая культура и спорт</strong></em><em> (ФВ, зачет) — опять на пары ездить :с</em></p><p id="a878bc51-fae2-4190-bb86-285b138a465d" class=""><em><strong>Курс по выбору</strong></em><em> (ИУ6, зачет) — в 5 семестре у вас будет первый курс по выбору. В учебном плане предусмотрено 2 курса: Разработка интернет-приложений и Теория информации, но обычно курсов больше. Самую свежую информацию вы получите на кафедре после начала семестра.</em></p><h3 id="7ffec23a-f9f0-4991-be46-55e63019bd4c" class="">Семестр 6.</h3><p id="4fec73ae-4b34-4ad9-8571-63b31b9d871e" class=""><em><strong>Курсовая работа семестра: Схемотехника</strong></em><em> — очень душная курсовая. Темы выдают Захаров/Еремин, взаимодействовать не любят. Неприятная штука, но пережить можно - ходите к ним как можно чаще и как можно раньше начинайте что-то делать.</em></p><p id="cf7a3747-3b3d-4300-8cf7-2aa926195617" class=""><em><strong>Иностранный язык</strong></em><em>(Л2, р. экзамен) - завершающий семестр иностранного языка. Нужно сдать простенький экзамен из чтения, грамматики и говорения.</em></p><p id="59a0938a-b521-4c24-a2fe-aba67507359d" class=""><em><strong>Физическая культура и спорт</strong></em><em> (ФВ, зачет) — финальный семестр. Свобода!</em></p><p id="c8ad800c-f44c-4838-8696-28b5c3643c7b" class=""><em><strong>Микропроцессорные системы</strong></em><em> (ИУ6, экзамен) - финальный хардбосс кафедры. Насыщенный курс, в котором разбирают несколько разных микроконтроллеров с разными диалектами ассемблера. На лабах интересно, но сдавать их довольно сложно.</em></p><p id="33ec5d81-b801-4ce2-90fe-030f3d17a23e" class=""><em>РК и экзамен зависят от настроения Хартова, но будьте готовы переписывать РК до посинения, если напишете какую-то чушь.</em></p><p id="118021e1-c884-4402-ba93-5965c9421a23" class=""><em>Из интересного - теоретическая часть РК пишется на листках, а практические задачи - на ноутбуках, поэтому не забудьте их с собой взять.</em></p><p id="e844e967-aa87-4d4b-b82f-0b19288bddc6" class=""><em>Преподаватель: Хартов Вячеслав Яковлевич — весьма строгий человек. Иногда довольно невнятно читает лекции, но в целом безобиден и с чувством юмора.</em></p><p id="acaed670-dfe5-4e4e-bfa4-fe581f8430a6" class=""><em>Лабы у большинства групп принимает описанный выше Бычков Борис Игоревич.</em></p><p id="b4459b6b-cf85-47d5-948f-e6021ad4eba9" class=""><em><strong>Основы проектирования устройств ЭВМ</strong></em><em> (ИУ6, зачет) -</em></p><p id="a8be7ce6-1a87-4113-a4e6-db919c2ff95b" class=""><em><strong>Вычислительная математика</strong></em><em> (ФН12, р. экзамен) - довольно невнятный предмет.</em></p><p id="e6640069-da4e-4ad7-a31c-0b1fb44eeda6" class=""><em><strong>Философия</strong></em><em> (СГН4, зачет) - отдых.</em></p><p id="0163c32d-cf5d-40e3-99bc-2ff099a5df1b" class=""><em><strong>Курс по выбору</strong></em><em> (ИУ6, зачет) — в 6 семестре выбор курса продолжается. В учебном плане предусмотрено 2 курса: Основы теории цифровой обработки сигналов и Методы и алгоритмы сжатия данных, но курсов может быть больше. Самую свежую информацию вы тоже получите на кафедре после начала семестра)</em></p><p id="985d28ba-917c-4e67-8d8a-ef56e759741c" class=""><em><strong>Бонус для ИВТ:</strong></em></p><p id="87298762-2d3f-4af6-a8b5-8e7f22b95215" class=""><em><strong>Конструирование и технология производства вычислительной техники</strong></em><em> (ИУ6, экзамен) - а вот и первое отличие в двух программах. Предмет интересный и объемный - от технологий печати плат до охлаждения корпусов. Сдать, на самом деле, довольно легко.</em></p><p id="589e4b04-6673-4e3e-ae3e-bf1cea022a2b" class=""><em>Преподаватель: Никаноров Анатолий Вадимович — очень добрый мужик, не валит, объясняет, если проявляешь интерес к его предмету.</em></p><h3 id="b8d9f090-19e9-4928-88ef-934846ed0ce5" class="">Семестр 7.</h3><p id="3d058fdf-1385-4805-9fe2-ef82099fd617" class=""><em><strong>Курсовая работа семестра: Микропроцессорные системы</strong></em><em> — научники - Хартов (жестко), Бычков (приятно), Хохлов (можно поделать прям руками), Сотников. Темы либо выбираем из списка, либо предлагаем свои.</em></p><p id="dd80c506-db70-4660-abd9-3b32e7b44217" class=""><em><strong>Теория систем и системный анализ (ИУ6, распр. экз, Булдакова Т. И.)</strong></em><em> - курс про то, как можно представлять системы, как их можно описывать и изображать. Не шибко полезно но в целом занимательно. Лектор немного чсв, но в целом справедлива. Семинары вел Миков, пользы от них никакой. Нужно сделать 2 домашки, очень лайтовые.</em></p><p id="373d0fba-6c75-472e-b34e-dad91b9521b9" class=""><em><strong>Организация ЭВМ и систем(ИУ6, распр. экз, Попов А. Ю.) -</strong></em><em> предмет про то, как работают различные ПЛИС с программной точки зрения. Курс довольно специфичный, но очень интересный во многом еще благодаря преподавателю. Нужно сделать 3 лабы.</em></p><p id="62c72b5e-669c-476b-94c9-92dd07cf96ea" class=""><em><strong>НИР (научник как у диплома) -</strong></em><em> исследовательская часть вашей дипломной работы. Занимает 30 страниц и должна представлять собой что то вроде сравнительного анализа различных решений в контексте вашей предметной области, либо просто теоретические выкладки из нее.</em></p><p id="e93d25ef-30cc-4def-a21f-83c6faae41fb" class=""><em><strong>Экономика часть 1 (ИБМ, зачет) -</strong></em><em> душные лекции с душными рк. Пользы 0</em></p><p id="c3897129-e61b-4dd1-a56c-19250ff032c7" class=""><em><strong>Экология ???</strong></em></p><p id="96a2194c-ae0b-4f48-9ba2-37fb821aa524" class=""><em>Самое главное в этом семе выбрать себе научника на диплом. Вам работать с ним год, он вас будет защищать на комиссии и помогать получать допуски. Выбирайте человека который занимается схожими с вашей темой диплома вещами. Ну или хотя бы не будет вам мешать заниматься тем, что вы выбрали.</em></p><h3 id="6fa9c5fa-ef9d-4f1b-a6a7-d9bc676a78da" class="">Семестр 8.</h3><p id="2549b62d-4c6e-4f0f-a345-25192db6c26b" class=""><em><strong>Диплом -</strong></em><em> ну тут все просто :D. Объем 70 страниц (30 у вас есть с прошлого сема), 5 листов со схемами которые описывают ваш диплом (UML-диаграммы разного рода, скриншоты). Есть предварительный смотр, на котором должно быть 50% диплома (формально), он в марте, там ваш диплом смотрит случайный человек с кафедры и дает советы. Те, кто показал обречены на пытку пинками под зад со стороны кафедры и повторными смотрами, поэтому лучше уж 50% выдавить. За 2 недели до защиты необходимо пройти норм. контроль. Эта такая штука, когда ваш диплом смотрят на соответствие ГОСТам, с 1 раза пройти никогда нельзя, поэтому готовимся заранее. При этом у вас в доступе будет exe, который даст вам советы по улучшению ваших текстовых материалов.</em></p><p id="0ef0f0b3-c5df-4c39-8d68-26d218ad1737" class=""><em><strong>Основы теории управления(Пролетарский А. В., Веселовская) -</strong></em><em> любопытный курс, который с точки зрения математики описывает управление в сложных системах. Все довольно лайтово, экз легкий, принимают лояльно так как последняя сессия.</em></p><p id="d8e02886-aba0-442b-8af3-a23f6a0e77e5" class=""><em><strong>Экономика часть 2 -</strong></em><em> продолжения фествиаля бесполезности.</em></p><p id="b2326773-6595-4bf9-b40f-82fb67dcf155" class=""><em><strong>Защита информации(Миков Д. А.)</strong></em><em> - сами готовим рефераты, сами читаем их на семинарах. Лекции душные, копипаста с законодательных актов.</em></p><p id="bfbf0e39-c30a-4ad5-8d78-971eb6a31780" class=""><em><strong>Безопасность жизнедеятельности -</strong></em><em> довольно любопытный курс который поведает вам о том, какие максимальные перегрузки может испытывать человек на рабочем месте. Есть лабы в корпусе Э, очень похожи на лабы по физике, также не рекомендуется пропускать.</em></p><p id="24cbcfdd-667e-4ad3-b6b1-bda242a4de9c" class=""><em>Помимо всего прочего если у вас немного не хватает до красного диплома вы можете прийти в деканат и попросить пересдать злополучные предметы. Обычно список таких “счастливчиков” высылается деканатом за месяц до конца сессии.</em></p><p id="d490990d-66b1-4825-9506-0e81fbb5fce7" class=""><em><strong>Некоторые нюансы жизни в МГТУ</strong></em></p><p id="072b742d-c75d-4bbb-a5d0-a244d716aa23" class=""><em><strong>Пароль от личного кабинета</strong></em></p><p id="a18cae68-a73c-490b-afdf-8d747933f371" class=""><em>Чуть ли не со 2-го сентября вас пригласят в кабинет 191. Его вы можете найти на 1-м этаже в ГЗ слева от главного входа. Там вам выдадут пароль и логин от сервисов МГТУ. Его вы будете использовать для входа на:</em></p><ul id="7cae816c-a8ee-4381-b2c3-b1ae975ad142" class="bulleted-list"><li style="list-style-type:disc"><em>Кафедральный Moodle для отчётов по лабам и тестов (</em><a href="https://e-learning.bmstu.ru/iu6/"><em>https://e-learning.bmstu.ru/iu6/</em></a><em>).</em><em><br/>Примечание: возможно, вам придётся и на другие “елёнинги” заходить, к примеру, для пересдач по истории вы посетите “елёнинг” СГН.<br/></em></li></ul><ul id="16a79fc9-c363-4026-9ab7-875554c54f03" class="bulleted-list"><li style="list-style-type:disc"><em>Бауманская электронная почта (</em><a href="https://student.bmstu.ru/"><em>https://student.bmstu.ru</em></a><em>). Её вы будете проверять вручную, паролей и серверов SMTP для сторонних клиентов почты, вроде K9 Mail вам не выдадут.</em></li></ul><ul id="05f6ad96-784d-4f17-86f0-dfc3b4a3ac5c" class="bulleted-list"><li style="list-style-type:disc"><em>Личный кабинет студента (</em><a href="https://lks.bmstu.ru/"><em>https://lks.bmstu.ru</em></a><em>). В нём вы найдёте свои баллы, даты ближайших контрольных и прочее. </em><em><strong>Не давайте логин и пароль своим родителям ни при каких обстоятельствах.</strong></em></li></ul><ul id="6f605bc9-82d9-44b9-a33c-c1d8b3c2ea54" class="bulleted-list"><li style="list-style-type:disc"><em>Электронный Университет - один из главных сайтов (</em><a href="https://eu.bmstu.ru/"><em>https://eu.bmstu.ru</em></a><em>). Там вы сможете найти свои посещения по физре, учебные планы следующих семаков, баллы вас, ваших товарищей, ваш рейтинг и вообще всё-всё-всё. Личный кабинет лишь эрзац-версия ЭУ. Только подключитесь вы к ЭУ только через:</em><ul id="b58e3a58-fc34-49c0-93bf-aaee6784ea27" class="bulleted-list"><li style="list-style-type:circle"><em>Бауманский прокси.</em></li></ul><ul id="0e9a2de9-7fdf-4229-8bdc-989e6f54a850" class="bulleted-list"><li style="list-style-type:circle"><em>Университетский Wi-Fi.</em></li></ul><ul id="23a9c515-0026-454c-8536-66043d951b14" class="bulleted-list"><li style="list-style-type:circle"><em>Общажный интернет (КС “Бауманец”).</em></li></ul></li></ul><ul id="f91cf3f4-6369-4089-9f64-b97270245fd0" class="bulleted-list"><li style="list-style-type:disc"><em>Wi-Fi в университете.</em><em><br/>Примечание: Wi-Fi в универе вы найдёте две точки доступа от МГТУ: bmstu_student, bmstu_stuff и bmstu_guest. В первом вы должны будете ввести логин-пароль в качестве логина-пароля Wi-Fi. Во втором вы залогинетесь по логину-паролю через форму входа на сайте, который откроется у вас в браузере. В третьем автор хз, зачем этот Wi-Fi.<br/></em></li></ul><ul id="6428aa6c-4590-4e78-a9b9-5d3d4213be04" class="bulleted-list"><li style="list-style-type:disc"><em>Бауманский прокси. К нему вы будете подключаться, если захотите войти в ЭУ из дома. Подробно множество способов описаны здесь: </em><a href="https://wiki.bmstu.ru/webvpn/index.php/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0"><em>https://wiki.bmstu.ru/webvpn/index.php/Настройка_доступа</em></a><em>. Автор данной секции рекомендует использовать Firefox для такой цели.</em></li></ul><ul id="3c6b65f9-2a2b-4049-922d-f0dccdd39c20" class="bulleted-list"><li style="list-style-type:disc"><em>Общажный проводной интернет. Вы укажете в настройках роутера тип соединения L2TP и введёте в качестве логина-пароля бауманские логины-пароль. Если что, на прошивках OpenWRT надо поставить пакет xl2tpd, после него полёт нормальный. Написано это здесь по двум поводам:</em><ul id="3da06e73-1ff3-4ca2-9958-92b98b600b39" class="bulleted-list"><li style="list-style-type:circle"><em>xl2tpd не для всех роутеров входит в состав прошивки. Тут всё просто - подключае роутер по проводу к компу, настраиваете, подключаете роутер по Wi-Fi как клиент к точке доступа от мобильного телефона и скачиваете xl2tpd.</em></li></ul><ul id="86a98dbd-184d-40a3-a6f3-c81cbedeeeb8" class="bulleted-list"><li style="list-style-type:circle"><em>Чтобы заверить интересующихся, что роутер с OpenWRT в общежитии работает без проблем.</em></li></ul></li></ul><ul id="e661043a-594d-4670-88c4-b36c14c5eaf1" class="bulleted-list"><li style="list-style-type:disc"><em>Приложение МГТУ. Да, оно работает и без пароля, но для входа по электронному пропуску вы будете использовать QR-код из приложения.</em></li></ul><p id="fd5183f4-60f3-44d0-8c15-aa8061f718c6" class=""><em>Вы не будете использовать бауманские логин-пароль для входа на:</em></p><ul id="14c22fa6-53b9-4c70-ad72-19a77ea4c611" class="bulleted-list"><li style="list-style-type:disc"><em>Полис МГТУ - </em><a href="https://fv.bmstu.net/"><em>https://fv.bmstu.net</em></a><em>, к примеру. Там производится запись на отработки по физре.</em></li></ul><ul id="5664180d-2726-44ce-aa3f-d24bbba08356" class="bulleted-list"><li style="list-style-type:disc"><em>НейроСПОК - </em><a href="https://bmstu.online/"><em>https://bmstu.online</em></a><em>. Там вы будете проходить тесты по физре.</em></li></ul><ul id="11bb34af-c9d6-4432-8f02-914d217b7a02" class="bulleted-list"><li style="list-style-type:disc"><em>Online-edu и “Открытый МГТУ” (</em><a href="https://online.bmstu.ru/"><em>https://online.bmstu.ru/</em></a><em>). </em><del><em>Дай бог вам избежать контакта с данным сервисом.</em></del></li></ul><p id="2644cb15-a6ce-4d67-92db-b1ede6fdc180" class=""><em>Примечание по паролю: для боящихся за свою безопасность рекомендую сменить пароль через гайд: </em><a href="https://mail.bmstu.ru/~postmaster/change_password.pdf"><em>https://mail.bmstu.ru/~postmaster/change_password.pdf</em></a><em>.</em></p><p id="ba5ecb3e-98f3-4fac-8366-42ff4c1de2cf" class=""><em>Логин и пароль совершенно типовые. Пароль всего на 8 символов, логин можно легко узнать даже если вы в лицо не видели его владельца - состоит он из первых букв фамилии, имени и отчества, а также номера зачётки (его вы также можете почерпнуть в ЭУ), записанных в латинице. Объяснить его проще на примере: поступи Бендер Остап Ибрагимович в МГТУ и имей номер зачётной книжки 22У512 (22 - год поступления), его бы логин был boi22u512.</em></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

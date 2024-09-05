@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>234PHA: Физика</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2d8b8fb5-b79a-4f99-b7fd-519f6a291f9a" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_5.png" style="object-position:center 46.809999999999995%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/science_yellow.svg"/></div><h1 class="page-title">234PHA: Физика</h1><p class="page-description"></p></header><div class="page-body"><div id="2ad6d7fe-adcf-499c-8f80-7cd3db994246" class="column-list"><div id="d6d7271d-26ab-49c1-9e3a-35b8fbf1611b" style="width:31.25%" class="column"><div><h1 id="b355db82-3dba-4ee0-87df-9292e6101df5" class="">Быстрая навигация</h1><p id="a13ea394-0a96-4715-86a1-24a690a1ba02" class=""><a href="../%D0%A1%20%D1%87%D0%B5%D0%B3%D0%BE%20%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C%20eb4f60a264dd4ad2a6888130ff5fd999.html"><span class="icon">🔍</span>С чего начать?</a> </p><h2 id="37d3ff83-83ca-43f6-b447-ca8560756584" class=""><a href="../%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%D1%8B%20b1f6d74e80f0445199a819f9b45769ec.html">Семестры</a></h2><hr id="0e6a4c8e-8191-46f9-b033-5c049b030a06"/><p id="70a6bb9d-12b5-47d3-bbcb-38d25da128b1" class=""><a href="../%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%D1%8B%20b1f6d74e80f0445199a819f9b45769ec/%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%201%20967b6acb67f443ff98906e6d30e648e0.html"><img class="icon" src="https://www.notion.so/icons/capricorn_yellow.svg"/>Семестр 1</a> </p><p id="457fceea-15e3-46b9-8070-b7188bdec3c9" class=""><a href="../%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%D1%8B%20b1f6d74e80f0445199a819f9b45769ec/%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%202%20971c4dbfbc5c4e049770b2cffc0aa84d.html"><img class="icon" src="https://www.notion.so/icons/die2_yellow.svg"/>Семестр 2</a> </p><p id="acf3f7d7-8c22-46a2-8f72-138719b3d59a" class=""><a href="../%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%D1%8B%20b1f6d74e80f0445199a819f9b45769ec/%D0%A1%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80%203%2000cf5b3a0a9f4de187c31d767ac587c0.html"><span class="icon">🐪</span>Семестр 3</a> </p><h2 id="7270a4ad-cf42-4a20-8228-1c8503556f6a" class=""><a href="../%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B%205846fe11f72c4f1aa607bb12048165df.html">Предметы</a></h2><hr id="157d24ad-91e0-443b-842b-5d5499307517"/><p id="0b4d355d-0911-40aa-ae4e-f30d7da72b7e" class=""><a href="1NGI%20%D0%9D%D0%B0%D1%87%D0%B5%D1%80%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F%20(%D0%98%D0%A3)%20ff64582827f74b51975c773c24178942.html"><img class="icon" src="https://www.notion.so/icons/pencil_yellow.svg"/>1NGI: Начертательная геометрия (ИУ)</a> </p><p id="9c967bc5-f8e7-4863-9825-f6f59deab10c" class=""><a href="1AGI%20%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F%207938061583b24ed68c6a674494fd69e9.html"><img class="icon" src="https://www.notion.so/icons/hexagon_yellow.svg"/>1AGI: Аналитическая геометрия</a> </p><p id="bf715cff-7614-4429-8a06-81e6981c8ed7" class=""><a href="1IFI%20%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20ec8a9b3a5ea64f55b51c0494ec9315d4.html"><img class="icon" src="https://www.notion.so/icons/script_yellow.svg"/>1IFI: Информатика</a> </p><p id="2baaff74-b944-4233-9e7d-8fd75374b660" class=""><a href="2LAI%20%D0%9B%D0%B8%D0%BD%D0%B5%D0%B8%CC%86%D0%BD%D0%B0%D1%8F%20%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%B8%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8%D1%85%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%2071aeb5683a3e49b39f5161965b0c956c.html"><img class="icon" src="https://www.notion.so/icons/midtones_yellow.svg"/>2LAI: Линейная алгебра и функции нескольких переменных (ИУ-РЛ-БМТ) </a> </p><p id="35eaf832-c834-49ea-8115-e2e11cc00b76" class=""><a href="2DUI%20%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D0%BB%D1%8B%20%D0%B8%20%D0%B4%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20(%D0%98%D0%A3-%D0%A0%D0%9B%2034ba22aff34a4cd4953524bd45ae70aa.html"><img class="icon" src="https://www.notion.so/icons/mathematics_yellow.svg"/>2DUI: Интегралы и дифференциальные уравнения (ИУ-РЛ-ПС-БМТ)</a> </p><p id="0a263c49-b848-4561-b130-2e38e9ab3ca7" class=""><a href="2IGI%20%D0%98%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0%20(%D0%98%D0%A3)%20c1f1b21439884ac7a02cc806abe2b791.html"><img class="icon" src="https://www.notion.so/icons/pencil_orange.svg"/>2IGI: Инженерная графика (ИУ)</a> </p><p id="e0f295e9-cdf4-4817-8e49-fca32e8f94ec" class=""><a href="2OOPI%20%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20(%D0%98%20342c43132eaf42a68239f6fe645f4815.html"><img class="icon" src="https://www.notion.so/icons/command-line_yellow.svg"/>2OOPI: Объектно-ориентированное программирование (ИУ6)</a> </p><p id="6980d7ca-8bec-4a84-894f-a368ee95f7cd" class=""><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a.html"><img class="icon" src="https://www.notion.so/icons/science_yellow.svg"/>234PHA: Физика</a> </p><p id="8fe394f6-ce91-42e4-90af-9e68f8aa7606" class=""><a href="3TVI%20%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D0%BE%D1%8F%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%B8%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%20a9398719b28b4893b7d1678da47b2839.html"><img class="icon" src="https://www.notion.so/icons/die4_yellow.svg"/>3TVI: Теория вероятности и математическая статистика (ИУ6)</a> </p><p id="1d30b3a3-5db8-4e5e-8512-0e2eaf0a72c1" class=""><a href="3BDI%20%D0%91%D0%B0%D0%B7%D1%8B%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20(%D0%98%D0%A36)%20bc420c3173ab41d8b708dc41f2634c2a.html"><img class="icon" src="https://www.notion.so/icons/database_yellow.svg"/>3BDI: Базы данных (ИУ6)</a> </p></div></div><div id="a0adf0ec-f5c2-4465-890e-e76ad1f45dcf" style="width:68.75%" class="column"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Семестр 2</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">РК1</summary><div class="indented"><figure id="6a8d6b47-739b-4c80-bee4-394315b5a7e9" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%A0%D0%9A1%20(2PHARK1-1)%206a8d6b47739b4c80bee4394315b5a7e9.html">Теория РК1  (2PHARK1-1)</a></figure><figure id="0668b2b9-0c84-4897-8afa-e10cbc54234c"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/izika_(1).pdf">Теория РК1 (2PHARK1-2)</a></div></figure><figure id="7472c338-791a-4204-9c0e-8e8bf10566c7"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/rk-1_2021_(1).pdf">Билеты РК1  (2PHARK1-3)</a></div></figure><figure id="623cd0f1-f367-45ca-8007-59d6e69b276e"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/204406-45886.docx.pdf">Решение билетов РК1  (2PHARK1-4)</a></div></figure><figure id="92109d19-fe25-4952-8f51-9b62548b1a6c" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%20%D0%A0%D0%9A1%20(2PHARK1-5)%2092109d19fe2549528f519b62548b1a6c.html">Решения билетов РК1  (2PHARK1-5)</a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">РК2</summary><div class="indented"><figure id="9bf2b2a5-c21d-4f44-8cc9-b01d64837197" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%BA%20%D0%A0%D0%9A2%20(2PHARK2-1)%209bf2b2a5c21d4f448cc9b01d64837197.html">Теория к РК2  (2PHARK2-1)</a></figure><figure id="3c5bd556-9508-4db3-8633-baa5089869b7"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/RK_2_(2).pdf">Билеты РК2  (2PHARK2-2)</a></div></figure><figure id="cf26d6ea-30aa-45a9-8dfd-76076cf4571f" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%20%D0%A0%D0%9A2%20(2PHARK2-3)%20cf26d6ea30aa45a98dfd76076cf4571f.html">Решения билетов РК2 (2PHARK2-3)</a></figure><p id="3b67653e-e2a9-4484-9a98-e35acfc0d666" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Экзамен</summary><div class="indented"><figure id="f72ccc33-e6a4-4ec8-bc7a-3e4d726b5eb1" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BA%20%D1%8D%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D1%83%202023%20(2PHAEX-1)%20f72ccc33e6a44ec8bc7a3e4d726b5eb1.html">Решение билетов к экзамену 2023 (2PHAEX-1)</a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Лабораторные работы</summary></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Остальное</summary><div class="indented"><figure id="40c42e6e-09ae-47e2-851a-2337f4d3278b" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8%20(2PHAADD-1)%2040c42e6e09ae47e2851a2337f4d3278b.html">Лекции (2PHAADD-1)</a></figure><figure id="91cc262a-6d00-4fef-b08f-5cbb733fe317" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%20%D0%BA%20%D0%94%D0%97%20(%D0%A7%D1%83%D0%B5%D0%B2%20%D0%90%20%D0%A1%20)%20(2PHAADD-2)%2091cc262a6d004fefb08f5cbb733fe317.html">Вопросы к ДЗ (Чуев А. С.) (2PHAADD-2)</a></figure><p id="fd5422d2-483d-46e6-9895-84b4b0f71790" class="">
+</p></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Семестр 3</summary><div class="indented"><ul id="9cbcb6f3-b4c3-40ac-9180-97a71ca6bb84" class="toggle"><li><details open=""><summary>РК1</summary><figure id="d490543a-025c-4515-a900-91676b67ce08"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/21_10_21g_Bilety_k_RK.pdf">Физика РК1 Билеты 2021 (3PHARK1-1)</a></div></figure><figure id="c8187ece-2d4a-4396-97e9-492bb901e4d8"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/rk3_2021_answers.pdf">Физика РК1 ответы на билеты (3PHARK1-2)</a></div></figure><figure id="4fbd55a1-e4a0-4e8a-9570-4a2b4d3ae4d7"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/FIZIKA-RK.pdf">Физика РК1 ответы на билеты (3PHARK1-3)</a></div></figure><figure id="36198c3e-4c52-4bbd-b3dd-f05617e7c157" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%20%D0%A0%D0%9A1%20%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B5%D1%82%D0%B8%D0%B7%D0%BC%20(3PHARK1-b)%2036198c3e4c524bbdb3ddf05617e7c157.html">Физика РК1: Электростатика и магнетизм (3PHARK1-b)</a></figure></details></li></ul><ul id="067203bc-f88a-4629-8182-f302ce6be813" class="toggle"><li><details open=""><summary>РК2</summary><figure id="60598664-e7b6-43d6-aa54-8e28d9e94ea5" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%20%D0%A0%D0%9A2%20%D0%A3%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B2%D0%B5%D0%BB%D0%BB%D0%B0%20%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%BE%2060598664e7b643d6aa548e28d9e94ea5.html">Физика РК2: Уравнения Максвелла. Электромагнитные волны (3PHARK2-b)</a></figure></details></li></ul><ul id="6484ded1-d578-4bbd-b654-91f5c200473f" class="toggle"><li><details open=""><summary>Экзамен</summary><figure id="1d3b742f-2468-4da5-92a0-670405d1c5fe" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%20%D1%8D%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B%202023-24(3PHAEX-1)%201d3b742f24684da592a0670405d1c5fe.html">Физика экзамен билеты 2023-24(3PHAEX-1)</a></figure><figure id="b2fa9c4d-b077-4df8-a142-ad308192c6a8" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BA%20%D1%8D%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D1%83%20%D0%BF%D0%BE%20%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B5%20(3PHAEX-b)%20b2fa9c4db0774df8a142ad308192c6a8.html">Подготовка к экзамену по физике (3PHAEX-b)</a></figure><figure id="1d0c56e4-20d9-4f15-ac55-999264a064f3"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/Bilety_Ekzamen_2022-2024.pdf">Физика экзамен билеты 2022-23 (3PHAEX-2)</a></div></figure><figure id="9bdc919f-1f4c-4ad7-b627-0d3206ef081d"><div class="source"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/vse_gotovoe.pdf">Физика экзамен решения билетов за 2022-23 год (3PHAEX-3)</a></div></figure><p id="eeaca396-142e-4eaf-b68f-01ff017838a0" class="">
+</p></details></li></ul><ul id="5053dc0f-122b-40b4-bd5d-df1e8f0e7dca" class="toggle"><li><details open=""><summary>Остальное </summary><figure id="c08f2763-78f1-4130-a2c4-2c4efee894fa" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8%20%D0%90%20%D0%A1%20%D0%A7%D1%83%D0%B5%D0%B2%D0%B0%20(3PHAADD-1)%20c08f276378f14130a2c42c4efee894fa.html">Лекции А. С. Чуева (3PHAADD-1)</a></figure><figure id="9019de99-6909-4c6b-8e24-c3ee63f989cb" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%A1%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80%D1%8B%20%D0%90%20%D0%A1%20%D0%A7%D1%83%D0%B5%D0%B2%D0%B0%20(3PHAADD-2)%209019de9969094c6b8e24c3ee63f989cb.html">Семинары А. С. Чуева (3PHAADD-2)</a></figure><figure id="b35de0a9-4076-4cf4-9d8f-643096a03618" class="link-to-page"><a href="234PHA%20%D0%A4%D0%B8%D0%B7%D0%B8%D0%BA%D0%B0%202d8b8fb5b79a4f99b7fd519f6a291f9a/%D0%9E%D1%82%D0%B2%D0%B5%D1%82%D1%8B%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%20%D0%BF%D0%BE%20%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B5%20%D0%94%D0%97%20%D0%90%20%D0%A1%20%D0%A7%D1%83%D0%B5%D0%B2%D0%B0%20(3PHAADD-%20b35de0a940764cf49d8f643096a03618.html">Ответы на вопросы по защите ДЗ А. С. Чуева (3PHAADD-3)</a></figure><p id="8e2be0fe-ea2e-4ee2-a0d4-16e8d317c7b1" class="">
+</p></details></li></ul><p id="f0a9c8eb-c785-4cc4-a75a-2a4b8289f3d0" class="">
+</p></div></details></div></div><hr id="9887b900-cc44-4feb-b0ed-4c27db75b274"/><div id="bec1ee90-5aa7-4976-a654-a4819d8beaab" class="column-list"><div id="6be51f3a-4376-4e0b-9c16-64248b7d2e28" style="width:87.5%" class="column"><figure id="5b7e089e-8308-4fa9-98cd-c716cf33861c" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mstyle mathsize="1.44em"><mstyle mathcolor="gray"><mrow><mi mathvariant="fraktur">C</mi><mi mathvariant="fraktur">o</mi><mi mathvariant="fraktur">p</mi><mi mathvariant="fraktur">y</mi><mi mathvariant="fraktur">r</mi><mi mathvariant="fraktur">i</mi><mi mathvariant="fraktur">g</mi><mi mathvariant="fraktur">h</mi><mi mathvariant="fraktur">t</mi></mrow><mtext> </mtext><mrow><mi mathvariant="fraktur">b</mi><mi mathvariant="fraktur">o</mi><mi mathvariant="fraktur">t</mi><mi mathvariant="fraktur">v</mi><mi mathvariant="fraktur">a</mi></mrow></mstyle></mstyle></mstyle></mrow><annotation encoding="application/x-tex">{\displaystyle\Large\color{gray}\mathfrak{Copyright}\ \mathfrak{botva}}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2679em;vertical-align:-0.2722em;"></span><span class="mord"><span class="mord sizing reset-size6 size8" style="color:gray;"><span class="mord mathfrak" style="color:gray;">Copyright</span></span><span class="mspace sizing reset-size6 size8" style="color:gray;"><span style="color:gray;"> </span></span><span class="mord sizing reset-size6 size8" style="color:gray;"><span class="mord mathfrak" style="color:gray;">botva</span></span></span></span></span></span></span></div></figure><figure id="fc003ada-c75e-4bb5-b652-a622cd684f14" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle mathsize="0.8em"><mstyle mathcolor="gray"><mi>f</mi><mi>i</mi><mi>i</mi><mi>x</mi><mi>i</mi><mi>i</mi><mo separator="true">,</mo><mi>a</mi><mi>r</mi><mi>y</mi><mi>a</mi><mi>g</mi><mi>r</mi><mi>i</mi><mo separator="true">,</mo><mi>d</mi><mi>i</mi><mi>m</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>k</mi><mi>s</mi><mo separator="true">,</mo><mi>y</mi><mi>u</mi><mi>s</mi><mi>u</mi><mi>n</mi><mi>n</mi><mi>y</mi><mi>k</mi><mi>i</mi><mi>t</mi><mi>t</mi><mi>y</mi><mo separator="true">,</mo><mi>t</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>p</mi><mi>h</mi><mi>o</mi><mi>n</mi><mi>i</mi><mi>s</mi><mi>t</mi><mn>95</mn><mo separator="true">,</mo><mi>p</mi><mi>l</mi><mi>u</mi><mi>t</mi><mi>t</mi><mi>a</mi><mi>n</mi></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\footnotesize \color{gray} fiixii,    aryagri, dimlanks, yusunnykitty, telephonist95, pluttan</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7111em;vertical-align:-0.1556em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.10764em;color:gray;">f</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ii</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">x</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ii</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">a</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">ry</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">a</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">g</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.02778em;color:gray;">r</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">i</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">d</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">im</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">l</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03148em;color:gray;">ank</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">nn</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ki</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">tt</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.03588em;color:gray;">y</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">t</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">e</span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">l</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">e</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">p</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">h</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">o</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">ni</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">s</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">t</span><span class="mord sizing reset-size6 size4" style="color:gray;">95</span><span class="mpunct sizing reset-size6 size4" style="color:gray;">,</span><span class="mspace" style="margin-right:0.1952em;"></span><span class="mord mathnormal sizing reset-size6 size4" style="margin-right:0.01968em;color:gray;">pl</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">u</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">tt</span><span class="mord mathnormal sizing reset-size6 size4" style="color:gray;">an</span></span></span></span></span></div></figure></div><div id="1e5a34c1-bfc5-4ab7-ae81-2138c8e426ce" style="width:12.500000000000005%" class="column"><figure id="70eb6564-6a00-4172-b7e8-2b127f2e0e9d" class="image"><a href="../qr4.png"><img style="width:144px" src="../qr4.png"/></a></figure><p id="f6158ee2-820f-484e-8a7d-e85271c9d1dd" class="">
+</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Как найти Тайную комнату в Хогвартсе и понять, что такое буква «ю»</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="06a5acad-e966-4156-8b79-6ee7113cb67f" class="page sans"><header><h1 class="page-title"><strong>Как найти Тайную комнату в Хогвартсе и понять, что такое буква «ю»</strong></h1><p class="page-description"></p></header><div class="page-body"><p id="11a20617-030f-448e-9961-14a3757d6ade" class="">
+</p><p id="1de8290c-ab87-4da9-87bb-1bd8baa045f8" class="">Привет, первокурсник!</p><p id="36490b36-1a6f-4bf9-85ed-2206927f088f" class="">Сегодняшняя статья посвящена основам основ, матчасти, которую должен выучить и не забывать каждый бауманец: терминологии, расписанию и ориентированию на местности.</p><figure id="ff47b407-0e6a-45c3-8292-6377b07431be" class="image"><a href="https://sun1-55.userapi.com/impg/jFJk0hT3FFVVh1f2ghIwv804aieSpqlxyxUKtA/6C10JctougE.jpg?size=800x541&amp;quality=96&amp;sign=b9567fc7035fd937a6a12cdf93c81777&amp;type=album"><img style="width:700px" src="https://sun1-55.userapi.com/impg/jFJk0hT3FFVVh1f2ghIwv804aieSpqlxyxUKtA/6C10JctougE.jpg?size=800x541&amp;quality=96&amp;sign=b9567fc7035fd937a6a12cdf93c81777&amp;type=album"/></a></figure><p id="91ebce43-c850-4b42-8c19-ef9f85340778" class="">МГТУ глазами растерянных первокурсников</p><h1 id="c07edebb-9085-433b-b0fd-bde203165ec1" class=""><strong>Терминология, аббревиатуры и сленг</strong></h1><p id="4d497773-c4bc-40b4-b26e-2b16ff43a95e" class="">Первая трудность, с которой сталкивается каждый новоиспечённый бауманец — это непонятные фразы со всех сторон, начиная с расписания и заканчивая выступлением ректора. Давайте расставим все точки над «ї» и познакомимся с современными молодёжными словами.</p><figure id="1af42d21-079c-4505-9852-07ed20ee73c0" class="image"><a href="https://sun9-16.userapi.com/impg/drDQDYi5awP1xGfUMS1RU5vbTQcIUYaJ7qpUgg/NP7k7BocYw4.jpg?size=807x558&amp;quality=96&amp;sign=df3f8667627207a092402a7462ae6590&amp;type=album"><img style="width:700px" src="https://sun9-16.userapi.com/impg/drDQDYi5awP1xGfUMS1RU5vbTQcIUYaJ7qpUgg/NP7k7BocYw4.jpg?size=807x558&amp;quality=96&amp;sign=df3f8667627207a092402a7462ae6590&amp;type=album"/></a></figure><p id="af86bf17-4a17-43cb-8018-64f25198f490" class="">Окружён, не побоюсь этого слова, hype&#x27;ом, но не сломлен</p><h1 id="cc9176b6-e3a4-44d4-a183-c88c5c5987a9" class=""><strong>Расписание</strong></h1><ul id="728a0f63-f321-4948-a368-33b130e3447a" class="bulleted-list"><li style="list-style-type:disc"><strong>Семестр </strong>— это полноценный учебный блок, который включает в себя лекции, семинары и т.д. В одном курсе два семестра: первый семестр длится с сентября и до января, второй - с февраля до июня.</li></ul><ul id="dba83f2d-2c52-4c51-b638-e98095abaa19" class="bulleted-list"><li style="list-style-type:disc"><strong>Модуль </strong>— это некий блок учебного плана. Семестр состоит из нескольких модулей, их количество зависит от конкретного предмета.</li></ul><ul id="9551f334-55db-4413-8a82-b0ed0b6ff1cd" class="bulleted-list"><li style="list-style-type:disc"><strong>Лекция </strong>— устное изложение теоретического материала. Лекция проходит в большой аудитории для всех групп вашего направления и курса. Лектор читает материал и записывает основные моменты на большой доске.</li></ul><ul id="c76cf2e6-187f-41e9-81be-7e9761cdae4a" class="bulleted-list"><li style="list-style-type:disc"><strong>Семинар</strong> — групповое практическое занятие под руководством преподавателя. На семинаре вы занимаетесь со своей группой решением практических заданий.</li></ul><ul id="74f04103-3d9b-4bc5-bb01-ade0a7330a1a" class="bulleted-list"><li style="list-style-type:disc"><strong>Лабораторные работы</strong> (лабы). Они проходят в специальных лабораториях. Например, в Доме Физики проводятся лабораторные по физике, в аудиториях с компьютерами - лабы по программированию.</li></ul><figure id="facb829a-4339-45c8-a543-75f72e6eda00" class="image"><a href="https://sun9-19.userapi.com/impg/vFhsRI0teVSSAgUA8Oh5r8B32yVSYzThaqWIRg/8eFcwSfI3oY.jpg?size=720x590&amp;quality=96&amp;sign=196299f0644baf990d6b3d8bde72da21&amp;type=album"><img style="width:700px" src="https://sun9-19.userapi.com/impg/vFhsRI0teVSSAgUA8Oh5r8B32yVSYzThaqWIRg/8eFcwSfI3oY.jpg?size=720x590&amp;quality=96&amp;sign=196299f0644baf990d6b3d8bde72da21&amp;type=album"/></a></figure><p id="015cd9f6-b93a-4869-b18d-45e71f4b1bfc" class="">Люди, не сдававшие химию, на лабах</p><ul id="cf9bd0ad-578f-4230-bce6-5ab6840e52ce" class="bulleted-list"><li style="list-style-type:disc"><strong>Курсовая работа (курсач)</strong> — большой семестровый проект, исследование по одному или нескольким предметам на определённую тему. В течение семестра вы описываете решение определённой проблемы со своим руководителем (преподавателем-наставником на курсаче). За выполнение курсовой вы получаете оценку в зачётку, но перед этим иногда защищаете её (отвечаете на вопросы по ней) комиссии из нескольких преподавателей.</li></ul><ul id="0773afae-8bee-4f08-9e37-3d39d91453e5" class="bulleted-list"><li style="list-style-type:disc"><strong>УТП (учебно-технологический практикум)</strong> — практика по предмету, как в реальных условиях. Существует для того, чтобы вы поняли, как полученные знания можно применить на работе по выбранной вами профессии.</li></ul><ul id="b2f39740-6d57-4ce7-8ef5-ce7c8d728959" class="bulleted-list"><li style="list-style-type:disc"><strong>СР (самостоятельная работа)</strong> — выходной день, в который вы не учитесь. Однако в этот день вам могут поставить лабы.</li></ul><p id="f9f45c3e-d762-4b1c-828a-d5cb92da3f59" class="">Более подробный гайд по расписанию в разделе <a href="https://vk.com/@profkomiubmstu-basic?anchor=raspisanie-2">ниже</a>.</p><h1 id="d14d0423-5bf0-4785-bf53-ed96301c70de" class=""><strong>Основные документы студента</strong></h1><ul id="74ffb97e-e5ae-42de-b90e-6554c087569b" class="bulleted-list"><li style="list-style-type:disc"><strong>Зачётная книжка (зачётка)</strong> — в неё ставят зачёты, оценки за предметы, оценки за УТП, ВКР, курсовые работы. Подтверждает факт того, что вы успешно закрыли семестр без долгов.</li></ul><ul id="308f28bc-1de3-4431-81d6-0db817553bea" class="bulleted-list"><li style="list-style-type:disc"><strong>Студенческий билет (студак)</strong> — служит доказательством того, что вы учитесь в МГТУ. Со студаком можно получить студенческие скидки/бонусы (например, при походе в музеи, театры). Студак продляется у заместителей деканов по вашему курсу.</li></ul><ul id="503107a8-9e6f-4cf0-9b5c-8033c10f5948" class="bulleted-list"><li style="list-style-type:disc"><strong>Справка об обучении </strong>— ещё один документ, подтверждающий факт вашего обучения. Если студак годится для более мелких, «бытовых» учреждений, то справка нужна для предприятий, работы, РЖД и других крупных организаций (вам всегда скажут, что нужен не студак, а именно справка). Справка заказывается онлайн или в деканате и делается в течение трёх рабочих дней.</li></ul><figure id="b2ff7ec6-c705-4639-9d10-a2bd44e5a800" class="image"><a href="https://sun9-37.userapi.com/impg/-QTlQersEtJ-2reTqnHc4iL8ksgya96eG1oOyg/e5-0hCKf8mU.jpg?size=1080x1040&amp;quality=96&amp;sign=c7c4005960d83416a5fec6ae628f671d&amp;type=album"><img style="width:700px" src="https://sun9-37.userapi.com/impg/-QTlQersEtJ-2reTqnHc4iL8ksgya96eG1oOyg/e5-0hCKf8mU.jpg?size=1080x1040&amp;quality=96&amp;sign=c7c4005960d83416a5fec6ae628f671d&amp;type=album"/></a></figure><p id="1e796b8f-fd70-44e0-bd8e-1de229d4b54d" class="">Студак, зачётка и паспорт — вот мои документы</p><h1 id="4cf34b62-de68-46c7-a30c-7c8370006f6d" class=""><strong>Контрольные мероприятия</strong></h1><ul id="2855588f-dac8-462f-b687-f772ad6bfbc2" class="bulleted-list"><li style="list-style-type:disc"><strong>Методичка (метода)</strong> — это такая инструкция или шпаргалка, как выполнять задания на практике. В ней есть теория по заданию и ход действий для его выполнения.</li></ul><ul id="1b38c256-7ee5-4fa3-944e-4a9de139049e" class="bulleted-list"><li style="list-style-type:disc"><strong>КР </strong>— контрольная работа. В КР проверяется умение решать практические задачи. Обычно контрольные работы проводятся на семинаре.</li></ul><ul id="6d1f1eda-bba3-4d9b-9f29-46bce6f646de" class="bulleted-list"><li style="list-style-type:disc"><strong>РК </strong>— рубежный контроль. В билете РК помимо практических задач есть теоретические вопросы. Рубежный контроль обычно пишется в конце модуля.</li></ul><ul id="0ea3122e-fda8-4756-ba1d-4130b534fd85" class="bulleted-list"><li style="list-style-type:disc"><strong>КДЗ (ДЗ)</strong> — контрольное домашнее задание. По итогам модуля (не обязательно каждого) вам выдаётся домашнее задание по пройденным в течение модуля темам, которое необходимо сдать без потери баллов до определённой даты.</li></ul><ul id="d908e55c-1de2-47ee-a77b-4045d641211c" class="bulleted-list"><li style="list-style-type:disc"><strong>Экзамен</strong> — итоговый контроль знаний по некоторым предметам в конце семестра в определённый день, установленный вашей кафедрой. Экзамен обязателен для сдачи, автоматы маловероятны. В зависимости от суммы баллов за экзамен и семестровых баллов студент получает оценку в зачётку.</li></ul><ul id="5da8f6e1-2d27-4711-8fb0-8494d060c42e" class="bulleted-list"><li style="list-style-type:disc"><strong>Распределённый экзамен (распр)</strong> — это экзамен, баллы за который можно получить в течение семестра (грубо говоря, получить автомат). Этот вид экзамена не обязателен к написанию, если вы набрали в течение семестра достаточно баллов на 3, 4 или 5. Но если есть желание повысить балл, то можно его написать.</li></ul><ul id="430b099e-fe2e-4bff-8987-55ef42d8a5d1" class="bulleted-list"><li style="list-style-type:disc"><strong>Зачёт </strong>— по некоторым предметам экзамен сдавать не нужно. Если все модули закрыты и долгов по предмету нет, то вам просто пишут слово «зачёт» в зачётную книжку. Оценку за такие предметы не ставят. Но иногда для получения зачёта нужно написать небольшую итоговую работу или ответить на несколько вопросов устно.</li></ul><ul id="cdcd05a3-70f4-4fba-8a27-f99d2edf55e0" class="bulleted-list"><li style="list-style-type:disc"><strong>Направление на пересдачу (направа)</strong> — если вы просрочили сдачу экзамена, зачёта, курсовой или лабы, словили по предмету долг, то нужно взять направление на пересдачу у заместителя декана. С направлением вы приходите к преподавателю, сдаёте предмет, преподаватель подписывает направление как закрытое, возвращаетесь к замдеку, и он закрывает вам предмет в электронной системе.</li></ul><p id="1527ed4b-6d31-4127-a409-232c23b4cd5c" class="">Подробнее о баллах, экзаменах и зачётах <a href="https://vk.com/@profkomiubmstu-basic?anchor=o-ballakh-sessii-i-nabolevshem">тут</a>.</p><h1 id="2b03cf87-f9f2-4185-a2c3-2c152779ece4" class=""><strong>Администрация вуза</strong></h1><ul id="2d61e3ee-7549-4202-87b5-7ac55d1b3c92" class="bulleted-list"><li style="list-style-type:disc"><strong>Ректор </strong>— глава вуза. Решает все глобальные вопросы в МГТУ, подписывает документы и ставит финальную подпись на приказах по вузу. Наш ректор — Гордин Михаил Валерьевич.</li></ul><figure id="9732785c-deed-4e10-9dc2-d4491f395f85" class="image"><a href="https://sun9-61.userapi.com/impg/8ZCey30up5cE88TtF0tuYFiwE8mw4VmfGONUaA/EYF7Yyah3UM.jpg?size=1200x1046&amp;quality=96&amp;sign=86161af79033b02883071d1562bbb8d7&amp;type=album"><img style="width:700px" src="https://sun9-61.userapi.com/impg/8ZCey30up5cE88TtF0tuYFiwE8mw4VmfGONUaA/EYF7Yyah3UM.jpg?size=1200x1046&amp;quality=96&amp;sign=86161af79033b02883071d1562bbb8d7&amp;type=album"/></a></figure><ul id="4a16a1c0-67bf-4d50-958f-4e8ebd6074b5" class="bulleted-list"><li style="list-style-type:disc"><strong>Проректоры </strong>— заместители ректора в определённой сфере (например, хозяйство, учебная работа).</li></ul><ul id="19c993fd-7133-494b-82b9-a510bb6a05a8" class="bulleted-list"><li style="list-style-type:disc"><strong>Декан факультета</strong> — решает вопросы и издаёт приказы в рамках факультета. Наш декан — Пролетарский Андрей Викторович.</li></ul><ul id="ad143e18-6637-4553-888d-085291228eb6" class="bulleted-list"><li style="list-style-type:disc"><strong>Заместитель декана по курсу (замдек)</strong> — человек, который передаёт всю важную инфу по факультету старостам вашего курса, а старосты пересылают это вам. Замдек продлевает студаки, выдаёт направления на пересдачу и помогает решить некоторые сложные вопросы с преподавателями и правами студентов.</li></ul><ul id="14bee8d0-52cf-48f4-ac8d-466a63483e6d" class="bulleted-list"><li style="list-style-type:disc"><strong>Заведующий кафедры (завкаф)</strong> — решает вопросы и издаёт приказы в рамках кафедры.</li></ul><h1 id="657bc8ce-d4ab-4e19-a3e0-a783b8f3dbb7" class=""><strong>Остальные важнейшие термины и план МГТУ сверху</strong></h1><ul id="d9a3f817-7137-4826-8ca5-52afdab79ce9" class="bulleted-list"><li style="list-style-type:disc"><strong>ГЗ (ГУК)</strong>— главное здание (главный учебный корпус) МГТУ.</li></ul><ul id="76c1e8d0-bafa-4cde-871b-dd9fb24b2bad" class="bulleted-list"><li style="list-style-type:disc"><strong>УЛК</strong> — учебно-лабораторный корпус МГТУ.</li></ul><ul id="66e3051d-b797-4645-b0eb-ac69004e9cfd" class="bulleted-list"><li style="list-style-type:disc"><strong>СК</strong> — спортивный комплекс МГТУ.</li></ul><ul id="39b494c9-712c-4d18-a6ff-3b6a04baf5d6" class="bulleted-list"><li style="list-style-type:disc"><strong>Энерго </strong>— корпус факультета «Э»</li></ul><ul id="e92d0d1a-e87e-47dd-ab15-789061f115d9" class="bulleted-list"><li style="list-style-type:disc"><strong>СМ </strong>— корпус факультета «СМ»</li></ul><ul id="9767d8fc-37c0-464d-95aa-88e3504ca80b" class="bulleted-list"><li style="list-style-type:disc"><strong>ИБМ/МТ</strong> — совместный корпус факультетов «ИБМ» и «МТ»</li></ul><figure id="51f102b8-84b4-4037-84a5-9054a7f74dac" class="image"><a href="https://sun9-14.userapi.com/impg/esmlq_r5rE7nPuzNmYEgjPcORE_Np6FIOyo-tQ/cEo_wZJJ-vQ.jpg?size=2560x1280&amp;quality=96&amp;sign=8c56e4583ba462f460cc3029f692ee1b&amp;type=album"><img style="width:700px" src="https://sun9-14.userapi.com/impg/esmlq_r5rE7nPuzNmYEgjPcORE_Np6FIOyo-tQ/cEo_wZJJ-vQ.jpg?size=2560x1280&amp;quality=96&amp;sign=8c56e4583ba462f460cc3029f692ee1b&amp;type=album"/></a></figure><figure id="b440340a-8a80-449e-ab19-0aa2a8b5e5d1" class="image"><a href="https://sun9-76.userapi.com/impg/15hw1LyVBtXDj2ILjaYXsPq4Z9K2elEfCWocQg/JSrKGois0Pg.jpg?size=982x720&amp;quality=96&amp;sign=beabb7f7e54c73cff375fb12fb12870f&amp;type=album"><img style="width:700px" src="https://sun9-76.userapi.com/impg/15hw1LyVBtXDj2ILjaYXsPq4Z9K2elEfCWocQg/JSrKGois0Pg.jpg?size=982x720&amp;quality=96&amp;sign=beabb7f7e54c73cff375fb12fb12870f&amp;type=album"/></a></figure><p id="4e4757c9-0dc7-4194-9a35-e886ce43bcbc" class="">Нереальный рисунок карандашом от<a href="https://vk.com/art_haix"> Алексея</a> из статьи <a href="https://vk.com/marksista">Марка</a></p><ul id="636cd6db-5087-4dfd-92f1-2a81a51fe3ed" class="bulleted-list"><li style="list-style-type:disc"><strong>Козер</strong><em> — </em>первокурсник<em>.</em></li></ul><ul id="13c0bfc6-e5c2-4733-9306-e4dc75ff5112" class="bulleted-list"><li style="list-style-type:disc"><strong>Бауманец </strong>— 2 или 3 курс и старше.</li></ul><ul id="f64959a9-53ce-49a7-b9f9-0e7a551fe9b8" class="bulleted-list"><li style="list-style-type:disc"><strong>Стилобат</strong> - то что между 10 и 11 общежитиями.</li></ul><ul id="742c5d4d-1643-4fed-b641-f2513715316d" class="bulleted-list"><li style="list-style-type:disc"><strong>Нога</strong> — памятник Н. Э. Бауману.</li></ul><figure id="43921d98-05ae-4df9-a714-ad8b73cbf8dd" class="image"><a href="https://sun9-32.userapi.com/impg/Ae7rrXBGbU5gOCKc9gPcZ9Pj2ul46QhMQfAkBg/TJGHVjwMxkw.jpg?size=758x755&amp;quality=96&amp;sign=0ce01ada5c1c0fd93152cb01b68c356d&amp;type=album"><img style="width:700px" src="https://sun9-32.userapi.com/impg/Ae7rrXBGbU5gOCKc9gPcZ9Pj2ul46QhMQfAkBg/TJGHVjwMxkw.jpg?size=758x755&amp;quality=96&amp;sign=0ce01ada5c1c0fd93152cb01b68c356d&amp;type=album"/></a></figure><ul id="28b004b6-1dae-4659-876c-ad8c23d6bbd8" class="bulleted-list"><li style="list-style-type:disc"><strong>Метро</strong> — тоннель напротив ноги.</li></ul><ul id="c2bdca59-60e2-4c01-80e6-2247cd344c55" class="bulleted-list"><li style="list-style-type:disc"><strong>Красная площадь</strong> — холл с бюстом Николая Эрнестовича.</li></ul><figure id="227da9d4-3e58-4b0e-97d4-e54ca056d598" class="image"><a href="https://sun9-1.userapi.com/impg/toyu4m6Ntk82YBC5LvHRcEfuvHj34vIr9kYVdw/pxfvuty9JfQ.jpg?size=2560x720&amp;quality=96&amp;sign=6caf58de79375dff9047d9fe7b46514c&amp;type=album"><img style="width:700px" src="https://sun9-1.userapi.com/impg/toyu4m6Ntk82YBC5LvHRcEfuvHj34vIr9kYVdw/pxfvuty9JfQ.jpg?size=2560x720&amp;quality=96&amp;sign=6caf58de79375dff9047d9fe7b46514c&amp;type=album"/></a></figure><p id="6d9af9db-3780-4dde-b4fa-461c511780f5" class="">Вид на ГЗ со стороны дворца</p><ul id="da380a5b-b9ca-4369-9fbe-a02b4ab7e34f" class="bulleted-list"><li style="list-style-type:disc"><strong>Обжорный ряд</strong> — коридор от Красной Площади со столовыми, пельменной, блинной и так далее.</li></ul><ul id="e4c70d42-5386-4299-98ef-0bf6ad7b042e" class="bulleted-list"><li style="list-style-type:disc"><strong>Титаник</strong> — УЛК.</li></ul><ul id="1029547b-7080-4609-ac50-8a3f00ceeb9d" class="bulleted-list"><li style="list-style-type:disc"><strong>Циркуль</strong> (крыло) — полукруглые коридоры со стороны Яузы, бывает северный и южный циркуль, научитесь их отличать как Вупсеня и Пупсеня.</li></ul><figure id="74dfbb16-39eb-43e4-acd9-ad7bd2a916a5" class="image"><a href="https://sun9-15.userapi.com/impg/CTxneYz4DqPWWzlRdmDB151PYjchTV5fxiMEWg/ZfBiVOvj9tM.jpg?size=776x807&amp;quality=96&amp;sign=c6b5c5e4909e71e1ae582335a630bd95&amp;type=album"><img style="width:700px" src="https://sun9-15.userapi.com/impg/CTxneYz4DqPWWzlRdmDB151PYjchTV5fxiMEWg/ZfBiVOvj9tM.jpg?size=776x807&amp;quality=96&amp;sign=c6b5c5e4909e71e1ae582335a630bd95&amp;type=album"/></a></figure><p id="9a8702a5-15cf-4d12-ae8c-73f9fce147ce" class="">Самая простая карта для планирования встреч</p><p id="03a9a8c6-fa1b-4782-81aa-b9d802bb76ec" class="">А вот <a href="https://vk.com/bmstu1830?w=page-40427933_50452804">полный список традиций, легенд и слов</a>. И <a href="https://vk.com/bmstu1830?w=page-40427933_49474689">бауманский разговорник</a>. Взяты, кстати, из официального группы МГТУ (vk.com/bmstu1830).</p><h1 id="45e4dae0-6bf9-43a5-a754-a8e2a6bbb09e" class=""><strong>Расписание</strong></h1><p id="34b553c3-f469-4dcc-8516-9f8409603524" class="">Перейдём к следующей проблеме первокурсников — невозможности понять странные расписание пар.</p><p id="5bf15e96-872f-452a-b134-9ff351576e39" class=""><strong>Расписание своей группы можно найти по ссылке:</strong> lks.bmstu.ru/schedule/list</p><p id="7e61b6ec-682f-4cdc-84eb-cfdab5425c84" class="">Для примера возьмём расписание группы ИУ3-31Б.</p><figure id="9b04c41e-7628-40b8-ad63-489c7378ae95" class="image"><a href="https://sun9-27.userapi.com/impg/oT6mTolst4FEnbaGCnrEX54nSYFyP23liUlO0g/eldGsQ2zBVg.jpg?size=807x701&amp;quality=96&amp;sign=a8fde0db7a2aa8bd0646ceda939c3c67&amp;type=album"><img style="width:700px" src="https://sun9-27.userapi.com/impg/oT6mTolst4FEnbaGCnrEX54nSYFyP23liUlO0g/eldGsQ2zBVg.jpg?size=807x701&amp;quality=96&amp;sign=a8fde0db7a2aa8bd0646ceda939c3c67&amp;type=album"/></a></figure><p id="77670b47-6ffd-4793-a9e4-98888f79fc36" class="">Мы не знаем что это такое, если бы мы знали что это такое, мы не знаем что это такое</p><h1 id="094dec54-c5a6-4edc-9146-e1b1a8c28af9" class=""><strong>Числитель и знаменатель</strong></h1><p id="d8a7b0c2-dce1-4920-b32c-fbb232a9c762" class="">Расписание <strong>зависит от чётности</strong> номера учебной недели. <strong>Нечётные недели </strong>(1, 3, 5 и так далее) именуются <strong>числителем (чс), </strong>а <strong>чётные</strong> (2, 4, и так далее)<strong> — знаменателем (зн). 1 неделя — </strong>всегда числитель.<strong> </strong>В расписании левый столбик всегда — это чс, а правый — зн. <strong>Всего в семестре 17 недель</strong>, пары могут стоять в любой день от пн до сб.</p><h1 id="a0c84abe-8a68-4b74-a439-8bbd14600ed0" class=""><strong>Номера кабинетов</strong></h1><p id="4b16f21d-d8d3-4f6f-814e-2ae3d8f3eb64" class="">Разберёмся в расшифровке номеров кабинетов.</p><figure id="aebf4266-1212-4065-880c-321a9db03e09" class="image"><a href="https://sun9-37.userapi.com/impg/GLfAvEeU2F6LMPbJJGQk-1ig72HPgKTYVfX5Qg/y-76-GsAM-o.jpg?size=702x409&amp;quality=96&amp;sign=dfae57c4f491d78106074ebf8eccfcc9&amp;type=album"><img src="https://sun9-37.userapi.com/impg/GLfAvEeU2F6LMPbJJGQk-1ig72HPgKTYVfX5Qg/y-76-GsAM-o.jpg?size=702x409&amp;quality=96&amp;sign=dfae57c4f491d78106074ebf8eccfcc9&amp;type=album"/></a></figure><p id="f143a7aa-9ca1-4fa7-b215-96c578af99f7" class="">ГОСТ 30.1Л, получается</p><p id="c8e8e568-1e33-47c9-a0ad-1014fa6bdfb1" class="">Как вы уже поняли, <strong>первая цифра — это номер этажа</strong> в здании. Если это нулевой этаж, то цифры будет две, если 10 и выше, то четыре.</p><p id="fdd632c4-9f8a-4ec6-808f-a242dbb9d744" class="">Суффикс — это буква в конце. Пояснения к каждой букве показаны на рисунке выше. <strong>Дополнительные суффиксы «а» и «б» </strong>— это либо смежные аудитории с похожим номером, но без буквы, либо аудитории внутри аудиторий без буквы (например, 416 и 416а).</p><p id="a6c1221c-d90e-4fa7-89cf-15cf44eb41ed" class="">Найти аудиторию, особенно в ГЗ, бывает довольно трудно. Поэтому в этом разделе вы сможете найти небольшую карту МГТУ для успешных поисков.</p><h1 id="f942a7a8-b42f-4e82-9cb5-7a12f1925027" class=""><strong>«Сем», «лек», «каф» и другие сокращения</strong></h1><ul id="ae3c264c-2b59-4fdc-97f5-32b02c104ae2" class="bulleted-list"><li style="list-style-type:disc"><strong>«Каф» </strong>—<strong> </strong>означает что кабинет надо уточнить на кафедре (о местоположении кафедр ИУ тут).</li></ul><ul id="e3d5fdba-30eb-4b04-95c6-0c7e954214ee" class="bulleted-list"><li style="list-style-type:disc"><strong>«Сем»</strong> — это семинар.</li></ul><ul id="74349561-1caa-40bc-9494-6676b7b00006" class="bulleted-list"><li style="list-style-type:disc"><strong>«Лек»</strong> — это лекция.</li></ul><ul id="b696ad17-9d60-4eb5-be95-3c7a1f9a7e69" class="bulleted-list"><li style="list-style-type:disc"><strong>«Лаб»</strong> — лабораторная работа по указанному предмету.</li></ul><ul id="b330ea1b-c877-4bad-a0dc-241bf0608bf1" class="bulleted-list"><li style="list-style-type:disc"><strong>«КК»</strong> — говорит о том, что аудитория проведения занятия — это компьютерный класс.</li></ul><ul id="0b5bc268-b4cf-4c11-bcc8-c906d292b491" class="bulleted-list"><li style="list-style-type:disc"><strong>Самостоятельная работа </strong>—<strong> </strong>это <strong>выходной</strong> — но могут поставить <strong>консультации </strong>(<strong>дополнительные встречи</strong> с преподавателем для сдачи ДЗ, пересдачи РК) или лабы.</li></ul><ul id="cd417a73-33a9-43ed-9ec4-e6ca70bdc9de" class="bulleted-list"><li style="list-style-type:disc"><strong>ФВ Измайлово</strong> — физкультура у Измайловских общежитий.</li></ul><ul id="c50c090c-3307-416d-8095-f77d92df75f4" class="bulleted-list"><li style="list-style-type:disc"><strong>ФВ</strong> — физкультура в СК.</li></ul><figure id="32f60e59-66f9-4a19-b506-d654dc272995" class="image"><a href="https://sun9-19.userapi.com/impg/lmkM3r4X9Eii0yTCiw72R96w8VUIgZr5x8fbPw/fx-ABNWOWPw.jpg?size=660x396&amp;quality=96&amp;sign=4e2ab3629574bbbb3afd070a2ee952c0&amp;type=album"><img style="width:660px" src="https://sun9-19.userapi.com/impg/lmkM3r4X9Eii0yTCiw72R96w8VUIgZr5x8fbPw/fx-ABNWOWPw.jpg?size=660x396&amp;quality=96&amp;sign=4e2ab3629574bbbb3afd070a2ee952c0&amp;type=album"/></a></figure><p id="c7de9c8b-e41a-4436-8414-236110bb1446" class="">Нет, бывают аббревиатуры и сложнее</p><h1 id="c62da807-2c8d-47b1-a1d2-4be722bd9d2e" class=""><strong>Самые популярным аудитории и кафедры и маршруты к ним</strong></h1><ul id="e5a15b6a-3b76-4182-96c1-5dd0496194ef" class="bulleted-list"><li style="list-style-type:disc"><strong>316 аудитория</strong> — если вы стоите лицом к зданию и спиной к памятнику Баумана (во дворе ГЗ), то вам нужно зайти в корпус через правую дверь. Здесь вы, никуда не сворачивая, поднимаетесь на 3 этаж. Чуть проходим вперёд и слева видим 316 аудиторию.</li></ul><ul id="4768e398-2398-4d84-93ea-517c8f9868c3" class="bulleted-list"><li style="list-style-type:disc"><strong>323 аудитория, кафедра химии (ФН5)</strong> — путь к ней такой же, что и к 316 аудитории, только когда поднимаемся на 3 этаж, сразу поворачиваем направо, и прямо по коридору будет 323 аудитория и кафедра химии (кафедра электротехники, кстати, там же).</li></ul><ul id="e45e8554-dbc0-440e-a101-d505bb40e0f5" class="bulleted-list"><li style="list-style-type:disc"><strong>327 аудитория</strong> — знаменитая химическая аудитория. Идём на &quot;Красную площадь&quot;, поворачиваем в &quot;Обжорный ряд&quot;, проходим его насквозь, упираемся в белую дверь, открываем её, выходим на железную лестницу, поднимаемся на 3 этаж — большая химическая химическая аудитория 327 перед нами.</li></ul><ul id="536d651c-56c0-47ba-9abf-10f8d0bb26b2" class="bulleted-list"><li style="list-style-type:disc"><strong>Кафедры английского языка</strong> — находятся на 4 и 6 этажах УЛК. Там вы найдёте все необходимое расписание и занятий и преподавателей, а также множество полезной информации.</li></ul><ul id="6f2fa4dd-0789-4d12-9d1e-796a5cefe60c" class="bulleted-list"><li style="list-style-type:disc"><strong>Кафедра инженерной графики/начертательной геометрии (РК1)</strong> —находится на 11 этаже УЛК. В холле находится расписание, где написаны аудитории. Перед первым занятием группа делится на 2 подгруппы, у каждой подгруппы будет свой преподаватель.</li></ul><ul id="d21c9117-7ff4-422f-9149-70eac872e218" class="bulleted-list"><li style="list-style-type:disc"><strong>Дом Физики, кафедра физики (ФН4)</strong> — от Красной площади идём по Обжорному ряду, проходим через двери, поворачиваем направо, заходим в двери. Перед вами Дом Физики.</li></ul><ul id="07eabd48-7112-401c-8587-36a99a563955" class="bulleted-list"><li style="list-style-type:disc"><strong>Термех (ФН3)</strong> — 8 этаж УЛК.</li></ul><ul id="2eb0f1a7-8e7a-47f7-b653-c5a5f9dce562" class="bulleted-list"><li style="list-style-type:disc"><strong>Матан/ангем (ФН2, ФН11 и ФН12) </strong>— 10 этаж УЛК.</li></ul><ul id="ed3ed72a-64c8-4e6e-8cd5-6a09e16e9cbd" class="bulleted-list"><li style="list-style-type:disc"><strong>Лекционка 501ю</strong> — пройдите до конца циркуль южного крыла на 3 этаже, сверните направо, пройдите прямо до столовой. У столовой снова сверните направо и идите до конца прямо, пока не уткнётесь в стену со стендами и поворотом только на лестницу. Поздравляем, вы дошли до конца южного крыла. По той самой лестнице рядом с вами поднимитесь на 2 этажа выше (на 5 этаж), зайдите на этаж, поверните налево и пройдите чуть прямо. Там и будет дверь в 501ю.</li></ul><figure id="e2de79c0-92aa-45ed-90f8-5a226a1f1383" class="image"><a href="https://sun9-2.userapi.com/impg/E4wMbHzTw-SOCSglpgXGOr0QPpeqTIenwkfuEQ/q3FZmBPcrxk.jpg?size=433x331&amp;quality=96&amp;sign=3ff0f5e7366aaef38ecbd0961da9a77a&amp;type=album"><img src="https://sun9-2.userapi.com/impg/E4wMbHzTw-SOCSglpgXGOr0QPpeqTIenwkfuEQ/q3FZmBPcrxk.jpg?size=433x331&amp;quality=96&amp;sign=3ff0f5e7366aaef38ecbd0961da9a77a&amp;type=album"/></a></figure><p id="3c034315-f440-40ec-b553-62b857ab7399" class="">Найти дорогу к 501ю</p><h1 id="f4ebd5d1-366f-41a6-bb67-2bdf043928b6" class=""><strong>Факты о расписании, делающие жизнь проще</strong></h1><ol type="1" id="42e054f4-5d74-4081-aaa2-289fd340f014" class="numbered-list" start="1"><li><strong>Самая ранняя пара</strong> начинается <strong>в 8:30</strong>, <strong>самая поздняя</strong> заканчивается<strong> в 20:45</strong>. Первое время лучше приходить в Университет заранее, чтобы успеть найти нужный кабинет.</li></ol><ol type="1" id="64a02d05-e8ab-41a4-827f-cbe591ee0193" class="numbered-list" start="2"><li><strong>Пары длятся 1 час 35 минут</strong>. Время начала и окончания пары</li></ol><ol type="1" id="98e5fd27-666d-41aa-88f6-87d897fb3d00" class="numbered-list" start="3"><li><strong>После первых 45 минут</strong> преподаватели обычно делают <strong>перерыв на 5 минут</strong>, чтобы немного отдохнуть и настроиться на новый блок продуктивной работы.</li></ol><ol type="1" id="5c743d70-8c01-4e9f-94a6-e5cdbd66b908" class="numbered-list" start="4"><li><strong>Перерывы между парами длятся 10 или 15 минут</strong> (смотрите временные промежутки между парами в расписании_.</li></ol><ol type="1" id="4ccaed45-fba6-43ba-be97-e2f617622940" class="numbered-list" start="5"><li>Чтобы не носить с собой бумажное расписание/запоминать пары/подглядывать на сайте, можно воспользоваться замечательными <strong>приложениями МГТУ</strong>, которые можно скачать <strong>в App Store</strong> (<a href="https://vk.com/away.php?to=https://apps.apple.com/ru/app/ru-bmstu-b/id1491376915&amp;post=-90354563_2616&amp;cc_key=">https://apps.apple.com/ru/app/ru-bmstu-b/id1491376915</a>) <strong>или Google Play</strong> (<a href="https://vk.com/away.php?to=https://play.google.com/store/apps/details?id=ru.bbmstu.schedule&amp;post=-90354563_2616&amp;cc_key=">https://play.google.com/store/apps/details?id=ru.bbms..</a>)</li></ol><h1 id="00ae2648-9521-4721-8994-87313ddf11bc" class=""><strong>Карта МГТУ</strong></h1><p id="4c701e98-238f-480d-a26c-1aafc526c3d2" class="">Не претендует на звание исчерпывающей, но большинство аудиторий найти можно.</p><figure id="7311794c-ef21-49df-b1d1-9acd6b730151" class="image"><a href="https://sun9-54.userapi.com/impg/SNBqIoQlbj-hTS5nRgyWMdW42iNVTn15TUEsBw/4d3_5r-_Wo0.jpg?size=807x598&amp;quality=96&amp;sign=0dacd0462025df996f5a7aebdb5e26c1&amp;type=album"><img style="width:700px" src="https://sun9-54.userapi.com/impg/SNBqIoQlbj-hTS5nRgyWMdW42iNVTn15TUEsBw/4d3_5r-_Wo0.jpg?size=807x598&amp;quality=96&amp;sign=0dacd0462025df996f5a7aebdb5e26c1&amp;type=album"/></a></figure><figure id="936a5508-1f81-466a-9e20-b6ba3052175e" class="image"><a href="https://sun9-43.userapi.com/impg/MlZXtnI2OsVi40LrtsDmOMaJS0Mdx9kNqM0OSQ/2pwP8s_TNw4.jpg?size=807x598&amp;quality=96&amp;sign=c33ec43cc7d0d88ee17de798f0a73352&amp;type=album"><img style="width:700px" src="https://sun9-43.userapi.com/impg/MlZXtnI2OsVi40LrtsDmOMaJS0Mdx9kNqM0OSQ/2pwP8s_TNw4.jpg?size=807x598&amp;quality=96&amp;sign=c33ec43cc7d0d88ee17de798f0a73352&amp;type=album"/></a></figure><p id="a01feabe-a89d-48fd-932d-296f0aa6f980" class="">1 из 2</p><p id="079b6930-909f-47e7-9c0a-4ad56c28cf78" class="">Карта МГТУ с разбивкой на квадратики для поиска по ним, страница 1</p><figure id="cdbb6ef4-71c5-4f8e-bed8-2cad88715aaa" class="image"><a href="https://sun9-14.userapi.com/impg/7NHrMFZam7Jtqf823Cei-tmMCcvwx5V-YrQZzw/Se-wWv-jE4A.jpg?size=807x598&amp;quality=96&amp;sign=d10a6ec227b4306839a28b10f0397e4d&amp;type=album"><img style="width:700px" src="https://sun9-14.userapi.com/impg/7NHrMFZam7Jtqf823Cei-tmMCcvwx5V-YrQZzw/Se-wWv-jE4A.jpg?size=807x598&amp;quality=96&amp;sign=d10a6ec227b4306839a28b10f0397e4d&amp;type=album"/></a></figure><figure id="857fea83-4359-40a1-a46e-46e38a5f36e1" class="image"><a href="https://sun9-27.userapi.com/impg/7RB-ZQuy6t7D7HByNkNn4TZZpoATn2gZl6AEyg/HVLHO8mJBWw.jpg?size=807x598&amp;quality=96&amp;sign=101e2231a11afe9ae0007983322d9c59&amp;type=album"><img style="width:700px" src="https://sun9-27.userapi.com/impg/7RB-ZQuy6t7D7HByNkNn4TZZpoATn2gZl6AEyg/HVLHO8mJBWw.jpg?size=807x598&amp;quality=96&amp;sign=101e2231a11afe9ae0007983322d9c59&amp;type=album"/></a></figure><p id="b404aeb1-f495-4728-86e3-5022da2d056f" class="">1 из 2</p><p id="eef07653-769b-47b0-a870-82d6563c0752" class="">Карта важных мест в ГЗ на 2 этаже, страница 1</p><h1 id="571392fa-6986-4c32-ad64-41790579f235" class=""><strong>О баллах, сессии и наболевшем</strong></h1><p id="857eff5c-a911-4d71-b506-f6a802ed3f41" class="">К сожалению, а может, и к счастью, с окончанием школы требовательность к вашим знаниям никуда не исчезла. В вузе она перетекает в такие явления как РК, КР, экзы и другие контрольные мероприятия.</p><p id="c03ec047-325f-4302-8b9a-258f6cdca866" class="">Давайте разберёмся в системе оценивания знаний в Первом техническом и научимся учиться (да, тавтология, знаю) на 5++++++++++++++…(+inf).</p><h1 id="17605218-dad5-4d8e-9c33-a6c0c423a295" class=""><strong>Балльно-рейтиговая система</strong></h1><p id="e7f45fd2-23d0-4eaa-b18c-35e682a5c788" class=""><strong>В Бауманке работает балльно-рейтинговая система,</strong> по которой вы, в течение семестра, <strong>получаете баллы</strong> за ДЗ, РК, КР, лабораторные работы и прочие мероприятия. Обычно они все привязаны <strong>к окончанию модуля</strong>.</p><p id="399d6607-6714-4682-bbe6-b94b53e4f442" class="">Баллы можно получить и з<strong>а ответ на паре или выполнение текущего домашнего задания</strong>. Но это зависит от преподавателя.</p><figure id="f74b7d68-a111-43b5-94e2-d2dc64db4aa4" class="image"><a href="https://sun9-77.userapi.com/impg/7pJImmQRySmA1Tk0oVhlLR240EqZrEDf24-T5A/6oiMguUktLM.jpg?size=604x371&amp;quality=96&amp;sign=60d8af4aee5bced9bb5f5c75af056b6f&amp;type=album"><img src="https://sun9-77.userapi.com/impg/7pJImmQRySmA1Tk0oVhlLR240EqZrEDf24-T5A/6oiMguUktLM.jpg?size=604x371&amp;quality=96&amp;sign=60d8af4aee5bced9bb5f5c75af056b6f&amp;type=album"/></a></figure><p id="eb22ffba-9d08-471c-b7fe-0403c14d5d5b" class="">Распределение баллов и контрольных мероприятий на примере предмета с 3 модулями</p><p id="cd76c798-13de-44b9-a731-e3857b0ca611" class=""><strong>Сумма баллов за модули = сумма баллов за семестр.</strong></p><p id="3bc15c70-21d8-4b5f-849a-2d7967f8f63c" class=""><strong>По зачётным дисциплинам достаточно набрать 60 баллов </strong>(это минимум) <strong>и не иметь долгов</strong> для получения зачёта.</p><p id="ad3a5ac3-5f2c-4c96-8a5c-25a09d237b43" class=""><strong>По экзаменационным вы можете получить от 42 до 70 баллов за семестр, остальные 18-30 на экзамене. </strong>Сумма баллов на экзамене превращается в оценку:<strong> от 60 до 70 баллов — удов., от 71 до 84 — хор., от 85 до 100 — отл.</strong></p><p id="2e94c1b1-bf39-457b-99bd-442010066be7" class="">Существуют<strong> дифференциальные зачёты или распределённые экзамены. </strong>К примеру, по инженерной графике. То есть <strong>за семестр по модулям суммарно вы можете получить 100 баллов и меньше</strong>. И оценка будет ставиться по полученным вами в течение семестра баллам (заработали 78 — получайте хор.). Но <strong>её можно повысить, написав в конце семестра экзамен</strong>. Тогда итоговая оценка сложится из баллов за семестр и за экзамен (написал экз на 18: 78 + 18 = 96, то есть отл.).</p><h1 id="c2a9b380-79a6-4731-bd80-290ebc4ae881" class=""><strong>На что влияют оценки</strong></h1><p id="2c4d13bf-8696-4392-9b6d-c29602a8c530" class=""><strong>Оценки в сессии влияют на </strong>возможность перевода на бюджетное место, получение стипендии, получение повышенной стипендии, поступление на военную кафедру, заселение в общагу по 15 форме или балл диплома для поступление в магистратуру/аспирантуру.</p><h1 id="c0b63c83-681c-414a-aea1-5415a2f655b2" class=""><strong>Досрочная сессия</strong></h1><p id="c4a05168-a95a-4b72-91d5-452ce5cde6a0" class="">Если есть необходимость, то <strong>можно сдать сессию досрочно</strong>, в декабре. Это может быть актуально если вы иногородний, тогда весь январь и первую неделю февраля вы можете отдыхать дома. Сначала вы, не имея долгов (то есть все РК и ДЗ вы должны сдавать так же досрочно), должны согласовать это с вашим преподавателем, и затем написать заявление в деканате, получить экз. лист и ведомость, и сдать экзамен. Учтите, что <strong>преподаватель может ожидать от вас более высокого уровня подготовки</strong>. Но <strong>шанс</strong> того что преподаватель (или лектор, или заведующий секцией ф-та) согласятся <strong>без весомых аргументов безумно</strong> <strong>мал.</strong> В общем, <strong>легче и лучше на автоматы сдать</strong>, если возможно.</p><h1 id="a72044b6-b735-4697-b42f-3172097c7262" class=""><strong>Иерархия бауманской администрации</strong></h1><h1 id="425e4fcc-587b-423d-acfc-484c4e4b20ed" class=""><strong>В общих чертах</strong></h1><figure id="dab18d37-6680-4485-aff1-1f4d40e4f827" class="image"><a href="https://sun9-73.userapi.com/impg/06wowaS-L5ntrDtll_ZumLw6xGKH2hfWlCQKeA/o3b2C6SlAgM.jpg?size=807x574&amp;quality=96&amp;sign=1735af87c92728495c20d0aa5794a98e&amp;type=album"><img style="width:700px" src="https://sun9-73.userapi.com/impg/06wowaS-L5ntrDtll_ZumLw6xGKH2hfWlCQKeA/o3b2C6SlAgM.jpg?size=807x574&amp;quality=96&amp;sign=1735af87c92728495c20d0aa5794a98e&amp;type=album"/></a></figure><p id="7be7cdb6-b99f-4d4f-8340-f5b029753658" class="">Сверху в общих чертах, а снизу пример</p><p id="214f15e3-1e6b-4f74-b0aa-244a61832a39" class="">Сейчас вы являетесь студентом определённой <strong>группы А</strong>. Ваша группа обучается по определённой программе, ходит на определённый предметы согласно расписанию, которое сделала для вас ваша<strong> кафедра Б</strong>. Кафедра Б объединяет все группы, с которыми вы учитесь вместе на лекциях. В Бауманке несколько кафедр, связанных сферой деятельности объединяются в <strong>факультеты В</strong>. А все факультеты вместе составляют вуз.</p><h1 id="fbc3fc13-b3ba-40dd-96b0-c0e1f4cb7099" class=""><strong>Понятный пример и немного о расшифровке названий групп</strong></h1><p id="e6dc5b60-433d-4318-8936-7ca6175a3d67" class="">Сложно объяснили? Хорошо, давайте простым языком о сложном на примере группы БМТ1-11Б.</p><p id="fdf7409b-8963-487b-8ce5-03847f757632" class="">Для начала поймём, из чего состоит название групп в МГТУ.</p><figure id="a8eaadcf-95f2-4cb6-8ccd-0a66618f43ac" class="image"><a href="https://sun9-48.userapi.com/impg/pz2NevzXXKOHiJb-DRBH-H6PoMOTnMj9wepQ7w/OYeayPdj1oY.jpg?size=807x218&amp;quality=96&amp;sign=2d179db7d5e0445b490c1379b7224395&amp;type=album"><img style="width:700px" src="https://sun9-48.userapi.com/impg/pz2NevzXXKOHiJb-DRBH-H6PoMOTnMj9wepQ7w/OYeayPdj1oY.jpg?size=807x218&amp;quality=96&amp;sign=2d179db7d5e0445b490c1379b7224395&amp;type=album"/></a></figure><p id="506c8cb2-b691-407d-b9b5-5e84a255c1ad" class="">БМТ1-21Б, БМТ1-31Б… И так до 81Б</p><p id="c295cd1a-fab0-4bf5-96b9-f920c18e397b" class=""><strong>Сначала идёт кафедра</strong>, на которой вы обучаетесь. Далее п<strong>осле дефиса номер текущего семестра</strong>. После идёт <strong>порядковый номер группы, в которую вас зачислили</strong> (она была выдана вам рандомно в приказе). Групп на потоке обычно не больше 6, а значит, и номеров тоже 6. <strong>Смысл последней буквы</strong> — ваша программа подготовки: <strong>бакалавриат </strong>(«Б», 4 года обучения), <strong>специалитет </strong>(нет буквы, 6 лет обучения), <strong>магистратура </strong>(«М», 2 года после бакалавриата), <strong>аспирантура </strong>(«А», три года после магистратуры) или <strong>ГУИМЦ </strong>(«Ц», факультет для студентов с ОВЗ).</p><p id="a8b43bfd-256a-43f1-8964-ad6b7078114e" class="">Итак, вроде с расшифровкой понятно. <strong>Перейдём к кафедре. Все ваши группы на потоке</strong> (БМТ1-11Б, БМТ1-12Б и БМТ1-13Б) <strong>имеет одно общее — кафедру</strong> БМТ1, по программе которой они учатся. <strong>И все, кто содержит в названии группы</strong> «БМТ1», <strong>тоже относятся к данной кафедре</strong>. И их <strong>программа </strong>по каждому курсу (1, 2, 3 и 4) тоже <strong>одинакова</strong>.</p><p id="f0395d80-78a7-45ad-9d56-e9e0fbf85dac" class=""><strong>Несколько кафедр с общими начальными буквами</strong> (БМТ1, БМТ2 и так далее) <strong>объединены в факультет</strong>. На факультете БМТ общая сфера деятельности — биомедицинские технологии. Но это достаточно широкое понятие, поэтому для более узких направлений и сделали кафедры. БМТ1, например, это «Биомедицинские технические системы».</p><p id="2833aefe-0752-4b00-86e8-5a2ec390424e" class=""><strong>Но поступали вы на направление подготовки, специальность, которая объединяла в себе несколько кафедр</strong>. Например, специальность 09.03.01 или «Информатика и вычислительная техника» включает в себя ИУ6, ИУ5, РК6 и РТ5. У них почти одинаковая программа и часто ведут одни и те же преподаватели. Но <strong>каждая кафедра будет задействована в своей области</strong> и, несмотря на сходство программ, во многом отличается различными моментами в программе.</p><h1 id="a0d97df8-27d5-48f3-b4a8-b5b184207281" class=""><strong>А где наш факультет и его кафедры?</strong></h1><p id="466ef677-c4e5-4a9f-8c9e-655fdb791323" class="">Подытожим наш разговор гайдом по местонахождению почти каждой кафедры ИУ и нашего деканата.</p><p id="c8ae575d-fba3-4796-a500-c9f6a38da0cf" class=""><strong>Факультет «ИУ»</strong> — 3 этаж, южное крыло. Необходимо пройти до конца циркуля, свернуть у синих диванчиков направо и идти прямо. В середине и конце коридора (до столовой) находится наш деканат.</p><figure id="e34c5cd8-2adb-40ef-b8c5-e20957bd7baf" class="image"><a href="https://sun9-69.userapi.com/impg/sIAXvvlWmPBXtKL7-pLi0v8DQ5gvR2BKFSXcWw/cXrBIb5UlJ8.jpg?size=510x510&amp;quality=96&amp;sign=2aecda058972639583af2fdef66b6e01&amp;type=album"><img style="width:510px" src="https://sun9-69.userapi.com/impg/sIAXvvlWmPBXtKL7-pLi0v8DQ5gvR2BKFSXcWw/cXrBIb5UlJ8.jpg?size=510x510&amp;quality=96&amp;sign=2aecda058972639583af2fdef66b6e01&amp;type=album"/></a></figure><ol type="1" id="3b6b3249-22b3-4ad5-9eba-8cfd182841c0" class="numbered-list" start="1"><li><strong>ИУ1 </strong>— поднимитесь по лифту у центральной лестницы ГЗ на 6 этаж (в лифте даже есть подпись — «кафедра ИУ1»). Поздравляем, вы находитесь на этаже, полностью принадлежащем данной кафедре. Если же лифт занят, или вы очень спешите, то поднимитесь на 5 этаж по центральной лестнице ГЗ, сверните налево, идите прямо вдоль левой стороны, пройдите мужской туалет и сразу слева будет лестница. По ней поднимаетесь на один этаж выше (на 6 этаж), заходите в дверь и оказываетесь на кафедре.</li></ol><ol type="1" id="4af57b48-7c42-4c99-8953-5c875e794a91" class="numbered-list" start="2"><li><strong>ИУ2 </strong>— поднимитесь по лифту у центральной лестницы ГЗ на 10 этаж (в лифте даже есть подпись — «кафедра ИУ2»). Поздравляем, вы находитесь на этаже, полностью принадлежащем данной кафедре. Если же лифт занят, или вы очень спешите, то поднимитесь на 5 этаж по центральной лестнице ГЗ, сверните налево, идите прямо вдоль левой стороны, пройдите мужской туалет и сразу слева будет лестница. По ней поднимаетесь на пять этажей выше (на 10 этаж), заходите в дверь и оказываетесь на кафедре.</li></ol><ol type="1" id="f7bbdf51-5f8a-48db-9cfc-e9c7de8ba32c" class="numbered-list" start="3"><li><strong>ИУ3 </strong>— необходимо пройти циркуль южного крыла 3 этажа до конца и рядом с поворотом в деканат у синих диванчиков найти лестницу со стеклянными дверями. Поднимитесь по ней на 2 этажа выше (на 5 этаж), зайдите на этаж и справа будет железная дверь кафедры.</li></ol><ol type="1" id="1a42555c-8802-46fc-b3b9-2b50c39f05db" class="numbered-list" start="4"><li><strong>ИУ4 </strong>— необходимо пройти циркуль северного крыла 2 этажа до конца, свернуть направо, пройти прямо до упора в стену, свернуть налево и пройти ещё один коридор до упора. Поздравляем, вы дошли до конца северного крыла. Прямо перед вами будет дверь на ИУ4. Если спуститься по лестнице рядом с кафедрой на этаж ниже, то там тоже будут кафедральные аудитории.</li></ol><ol type="1" id="0053559b-ea23-4bb8-89b9-2af335bbb1e7" class="numbered-list" start="5"><li><strong>ИУ5 </strong>— поднимитесь по лифту у центральной лестницы ГЗ на 9 этаж (в лифте даже есть подпись — «кафедра ИУ5»). Поздравляем, вы находитесь на этаже, полностью принадлежащем данной кафедре. Если же лифт занят, или вы очень спешите, то поднимитесь на 5 этаж по центральной лестнице ГЗ, сверните налево, идите прямо вдоль левой стороны, пройдите мужской туалет и сразу слева будет лестница. По ней поднимаетесь на четыре этажа выше (на 9этаж), заходите в дверь и оказываетесь на кафедре.</li></ol><ol type="1" id="7fa32fca-ca44-4a7d-82f8-83a523db265a" class="numbered-list" start="6"><li><strong>ИУ6 </strong>— поднимитесь по лифту у центральной лестницы ГЗ на 8 этаж (в лифте даже есть подпись — «кафедра ИУ6»). Поздравляем, вы находитесь на этаже, полностью принадлежащем данной кафедре. Если же лифт занят, или вы очень спешите, то поднимитесь на 5 этаж по центральной лестнице ГЗ, сверните налево, идите прямо вдоль левой стороны, пройдите мужской туалет и сразу слева будет лестница. По ней поднимаетесь на три этажа выше (на 8 этаж), заходите в дверь и оказываетесь на кафедре.</li></ol><ol type="1" id="0c644e65-0310-45dc-94ce-d1635ce063bc" class="numbered-list" start="7"><li><strong>ИУ7 </strong>— единственная кафедра ИУ, которая находится в УЛК. Поднимаетесь на 5 этаж УЛК , идёте до конца направо и находите там аудитории 501л-504л. Это кафедра ИУ7.</li></ol><ol type="1" id="9967eeb0-f318-4ec1-89a4-3022cfc630b0" class="numbered-list" start="8"><li><strong>ИУ8</strong> — пройдите до конца циркуль южного крыла, сверните направо, пройдите деканат. У столовой снова сверните направо и идите до конца прямо, пока не уткнётесь в стену со стендами и поворотом только на лестницу. Поздравляем, вы дошли до конца южного крыла. По той самой лестнице рядом с вами поднимитесь на 2 этажа выше (на 5 этаж), зайдите на этаж и справа будет дверь кафедры.</li></ol><ol type="1" id="d9f60fe2-c662-48bb-b348-9d8a55f1eee6" class="numbered-list" start="9"><li><strong>ИУ9 </strong>— пройдите до конца циркуль южного крыла на 3 этаже, сверните направо, пройдите деканат. У столовой снова сверните направо и идите прямо по правой стороне. Почти сразу вы увидите кабинеты кафедры ИУ9. В этом же коридоре кафедральная лекционка.</li></ol><figure id="7ef1a522-6d66-4a7a-aaaf-02f2daf21f29" class="image"><a href="https://sun9-12.userapi.com/impg/4ZvoTncQh2rzxlon1gtxOgOEE3EzieEhw_YzoA/hGlHz_a5PhE.jpg?size=688x730&amp;quality=96&amp;sign=91d418a6107ad360fbba0a378d63d727&amp;type=album"><img src="https://sun9-12.userapi.com/impg/4ZvoTncQh2rzxlon1gtxOgOEE3EzieEhw_YzoA/hGlHz_a5PhE.jpg?size=688x730&amp;quality=96&amp;sign=91d418a6107ad360fbba0a378d63d727&amp;type=album"/></a></figure><h1 id="33a43895-fe0c-4368-9871-741a10a917c2" class=""><strong>Выражаем благодарность</strong></h1><p id="7d02ceb7-5461-4f44-b9ba-66586e068d46" class=""><a href="https://vk.com/marksista">Марку</a> за его замечательную <a href="https://vk.com/@marksista-how-to-stay-alive?anchor=basics">статью про всё в Бауманке</a>, а также художникам, создавшим удивительные рисунки для этой статьи: <a href="https://vk.com/rowte">Олегу</a> и <a href="https://vk.com/art_haix">Алексею</a>.</p><p id="d7df90d8-e677-4e6d-875d-899ecbabf00f" class=""><a href="https://vk.com/bmstu1830">Официальной группе МГТУ</a> за их этот (<a href="https://vk.com/wall-40427933_21996">https://vk.com/wall-40427933_21996</a>)</p><p id="6fa70e0b-a606-4d88-a355-960904b822db" class="">и этот (<a href="https://vk.com/bmstu1830?w=page-40427933_43924738">https://vk.com/bmstu1830?w=page-40427933_43924738</a>) гайды.</p><p id="ab4f87dc-edb7-4b5b-9caf-3b78d60dabdf" class=""><a href="https://vk.com/shop.bmstu">Магазину бауманской атрибутики</a> за замечательные карты.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
